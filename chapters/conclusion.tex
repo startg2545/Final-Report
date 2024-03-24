@@ -2,11 +2,37 @@
 
 \section{\ifenglish Conclusions\else สรุปผล\fi}
 
-นศ. ควรสรุปถึงข้อจำกัดของระบบในด้านต่างๆ ที่ระบบมีในเนื้อหาส่วนนี้ด้วย
+In this project, I integrate insights from diverse studies to develop a recommendation system grounded 
+in comprehensive research. The system is designed to recommend the most suitable courses for learners 
+who have previously taken at least one course. It offers personalized recommendations, conducts thorough 
+user data analysis to enhance accuracy, and contributes to improving the overall learning experience. 
+However, it's important to note that the system's applicability is currently limited to online learning 
+platforms that adhere to specific data formats required for implementation.
+
+\begin{enumerate}
+    \item \textbf{First Approach Analysis:} The first approach has relatively low accuracy in both Hit 
+    Rate and F1 Score, indicating that the model's performance in recommending relevant courses to users 
+    is not very effective. A Hit Rate of \textit{14.69\%} means that only about \textit{14.69\%} of the recommended courses 
+    match with the actual courses users take. Similarly, an F1 Score of \textit{2.58\%} suggests poor precision and 
+    recall, further highlighting the limitations of this approach in accurately predicting user preferences.
+    \item \textbf{Second Approach Analysis:} The second approach shows improved accuracy compared to the 
+    first approach, with a Hit Rate of \textit{48.24\%} and an F1 Score of \textit{7.92\%}. This indicates that the model in 
+    the second approach performs better in recommending courses that users are likely to take. However, 
+    the accuracy is still relatively moderate, suggesting room for further improvement.
+    \item \textbf{Hybrid Approach Analysis:} The hybrid approach demonstrates the highest accuracy among 
+    the three approaches, with a Hit Rate of \textit{69.18\%} and an F1 Score of \textit{11.62\%}. This indicates that 
+    combining multiple recommendation techniques, such as content-based filtering and collaborative filtering 
+    (as implied by the hybrid approach), leads to more accurate and personalized recommendations for users. 
+    The higher Hit Rate and F1 Score suggest that the hybrid approach has a better understanding of user 
+    preferences and is more successful in recommending relevant courses.
+\end{enumerate}
 
 \section{\ifenglish Challenges\else ปัญหาที่พบและแนวทางการแก้ไข\fi}
 
-ในการทำโครงงานนี้ พบว่าเกิดปัญหาหลักๆ ดังนี้
+The challenges encountered in the project are diverse, with the most significant being the process of 
+gathering and comprehending studies related to the recommender system. We conducted a deep investigation 
+into the evidence provided by authors to ensure reliability. Additionally, our main obstacle lies in 
+Machine Learning Operations (MLOps) concerning deployment, as we are unfamiliar with the process.
 
 \section{\ifenglish%
 Suggestions and further improvements
@@ -15,4 +41,6 @@ Suggestions and further improvements
 \fi
 }
 
-ข้อเสนอแนะเพื่อพัฒนาโครงงานนี้ต่อไป มีดังนี้
+A suggestion for improving the project is to expand its compatibility with a broader range of online 
+learning platforms. This would reduce the concerns developers have about data consistency between their 
+datasets and the recommender system, making it more accessible and user-friendly across various platforms.

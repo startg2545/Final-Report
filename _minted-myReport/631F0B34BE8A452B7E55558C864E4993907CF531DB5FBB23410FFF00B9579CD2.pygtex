@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{isne\PYGZus{}recommendation} \PYG{k+kn}{import} \PYG{n}{TfidfLinearKernel}\PYG{p}{,} \PYG{n}{FeatureRatingsKNN}\PYG{p}{,} \PYG{n}{Hybrid}
+\end{Verbatim}

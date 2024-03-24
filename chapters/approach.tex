@@ -8,9 +8,9 @@
 Overall, the methodologies involved data preprocessing, implementing 
 two different recommendation algorithms \textit{(TF-IDF and KNN)}, 
 combining their results into a hybrid approach, and integrating 
-the recommendations into a web application for user interaction 
-and visualization of results. Here's a step-by-step summary of 
-the experimentation and results:
+the system to become a part of backend system behind the e-Learning 
+platform for user interaction and visualization of results. 
+Here's a step-by-step summary of the experimentation and results:
 
 \makeatletter
 
@@ -497,7 +497,14 @@ Set the weights and normalize the matrices of TF-IDF and KNN.
 We apply Nearest Neighbors to the stacked matrix to get the final recommendation.
 Nevertheless, the process of recommendation is the same as the KNN approach.
 
-\section{Evaluation Method}
+\newpage
+
+\section{Evaluation}
+
+Evaluation helps you assess how well your recommendation system is performing. It 
+allows you to measure the accuracy of the recommendations made by the model and 
+understand its effectiveness in suggesting relevant courses to users.
+
 \begin{enumerate}
     \item \textsf{Consider users who have taken more than one course.}
     \item \textsf{The training and testing datasets are splitted by identifying the ratio.}
@@ -508,7 +515,12 @@ Nevertheless, the process of recommendation is the same as the KNN approach.
 \end{enumerate}
 
 \subsection{Training and Testing}
-This method is designed to split a dataset of user-course interactions into training and testing sets, ensuring that each courses of users are appropriately divided for machine learning model training and evaluation.
+
+Training and testing allow you to evaluate the performance of your recommendation system. 
+By training the model on a subset of data and testing it on another subset that it hasn't 
+seen during training, you can assess how well the model generalizes to new data. This helps 
+in understanding if the recommendations made by the system are accurate and relevant.
+
 \begin{enumerate}
     \item \textsf{\textbf{Consider only users who have taken ore than 1 course: }
     This step ensures that you have enough data from each user for meaningful analysis.}
@@ -519,29 +531,29 @@ This method is designed to split a dataset of user-course interactions into trai
 \end{enumerate}
 
 \subsection{Accuracy Measurement}
-There are two performance measurements in total including hit rate and f1 score.\\
+There are two performance measurements in total including \textit{hit rate} and \textit{f1 score}.
 
-\textbf{Hit Rate} \\
+\subsubsection{Hit Rate}
 The performance of models is evaluated by predicting a certain number of courses for each user in the training dataset. Then, for each user in the test dataset, it will check if any of the courses they actually took are among the N predicted courses. if at least one of the predicted courses matches a course taken by the user in the test dataset, it is considered as a Hit. 
 Hit Rate is calculated as follows:
 
 \begin{equation}
-    \text{HitRate} = \frac{Number of hit users}{All users}
+    \text{HitRate} = \frac{\texttt{Number of hit users}}{\texttt{All users}}
 \end{equation}
 
-A larger value of recommended courses can potentially improve the hit rate because it provides more opportunities to include relevant items. Therefore, the performance of the hit rate indeed depends on the number of recommended courses.\\
+\noindent A larger value of recommended courses can potentially improve the hit rate because it provides more opportunities to include relevant items. Therefore, the performance of the hit rate indeed depends on the number of recommended courses.
 
 
-\textbf{F1 Score}\\
+\subsubsection{F1 Score}
 This is a metric used to evaluate the performance of a classification model. It measures the proportion of true positive predictions among all positive predictions made by the model and measures the proportion of true positive predictions among all actual positive cases in the data simultaneously.
 To find the F1 Score from Recall and Precision, Recall, Precision, and F1 Score can use the following formulas:
 
 \begin{equation}
-    \text{Recall} = \frac{Number of correctly predicted items}{Total number of relevant items}
+    \text{Recall} = \frac{\texttt{Number of correctly predicted items}}{\texttt{Total number of relevant items}}
 \end{equation}
 
 \begin{equation}
-    \text{Precision} = \frac{Number of correctly predicted items}{Total number of recommended items}
+    \text{Precision} = \frac{\texttt{Number of correctly predicted items}}{\texttt{Total number of recommended items}}
 \end{equation}
 
 \begin{equation}
@@ -554,10 +566,10 @@ To find the F1 Score from Recall and Precision, Recall, Precision, and F1 Score 
     \item \texttt{Total number of recommended items - All courses that the recommendation system suggests for user}
 \end{itemize}
 
-To find the average F1 score from all users by
+\noindent To find the average F1 score from all users by
 
 \begin{equation}
-    \text{$F1_{average}$} = \frac{\sum_{i=1}^{n}F1_{i}}{Number of Users}
+    \text{$F1_{average}$} = \frac{\sum_{i=1}^{n}F1_{i}}{\texttt{Number of Users}}
 \end{equation}
 
-The harmonic mean nature makes sure if either Precision or Recall has a really high value, then it does not dominate the score. F1 Score has a high value when both precision and recall values are close to 1.
+\noindent The harmonic mean nature makes sure if either Precision or Recall has a really high value, then it does not dominate the score. F1 Score has a high value when both precision and recall values are close to 1.

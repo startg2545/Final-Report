@@ -9,66 +9,81 @@ the proposed methodologies were put to the test, and their efficacy was evaluate
 The primary objective was to assess the performance and suitability of the 
 recommendation system in providing personalized course recommendations to users.
 
-\section{Upload dataset}
+\section{Data Preparation}
+
+\subsection{Import Datasets}
 The dataset provided by the developer is required to be a csv format and consists of two main components:
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+import pandas as pd
+i_data = pd.read_csv('https://startg2545.github.io/item_tutorial.csv')
+ui_data = pd.read_csv('https://startg2545.github.io/user_item_tutorial.csv')
+\end{minted}
+
+\subsection{Import the Classes}
+
+First of all, import one of these classes from the isne\_recommendation 
+module that you desire to evaluate the model.
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+from isne_recommendation import TfidfLinearKernel, FeatureRatingsKNN, Hybrid
+\end{minted}
+
+\subsection{Fit the Model}
+
+The fit function is responsible for adjusting the internal parameters of the model 
+to minimize the difference between the predicted outputs and the actual outputs 
+(also known as the ground truth) in the training data.
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+model = TfidfLinearKernel.fit(i_data)
+model = FeatureRatingsKNN.fit(ui_data)
+model = Hybrid.fit(i_data, ui_data)
+\end{minted}
+
+\newpage
+\section{Split the Data for training and testing}
+
+The \textit{train-test split} is a common technique used in machine learning to evaluate the 
+performance of a model on unseen data. This technique involves splitting the dataset 
+into two subsets: one for training the model and another for testing its performance
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+train, test = TfidfLinearKernel.train_test_split(ui_data)
+\end{minted}
+
+\section{Evaluate the model}
+
+Model evaluation is a crucial step in machine learning to assess the performance and 
+effectiveness of a trained model on unseen data. The model evaluation function involves 
+using various metrics and techniques to measure how well the model generalizes to new data.
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+# Calculate the hit rate of the model
+hit_rate = TfidfLinearKernel.hit_rate(train, test, i_data, model)
+hit_rate = FeatureRatingsKNN.hit_rate(train, test, model)
+hit_rate = Hybrid.hit_rate(train, test, i_data, model)
+# Calculate the F1 score of the model
+f1_score = TfidfLinearKernel.f1_score(train, test, i_data, model)
+f1_score = FeatureRatingsKNN.f1_score(train, test, model)
+f1_score = Hybrid.f1_score(train, test, i_data, model)
+\end{minted}
+
+\section{Performance Evaluation}
+
 \begin{enumerate}
-    \item \textsf{\textbf{User Dataset:} This includes the user's profile, which mostly contains 9 information 
-    that are username, course, email, age, education, time, payment, address, and score they have taken 
-    in the past. The user's profile is used to generate personalized recommendations.}
-    \item \textsf{\textbf{Course Dataset:} This mainly includes 2 information about the courses available on the 
-    platform that are course name and description. This data is used to generate course recommendations.}
+    \item \textbf{First Approach}:
+    \begin{itemize}
+        \item Hit Rate Accuracy: 14.69\%
+        \item F1 Score Accuracy: 2.58\%
+    \end{itemize}
+    \item \textbf{Second Approach}:
+    \begin{itemize}
+        \item Hit Rate Accuracy: 48.24\%
+        \item F1 Score Accuracy: 7.92\%
+    \end{itemize}
+    \item \textbf{Hybrid Approach}:
+    \begin{itemize}
+        \item Hit Rate Accuracy: 69.18\%
+        \item F1 Score Accuracy: 11.62\%
+    \end{itemize}
 \end{enumerate}
-
-\begin{figure}[H]
-\center
-\includegraphics[width=4.2in]{img/dataset.png}
-\caption{Uploading dataset}
-\end{figure}
-
-\newpage
-\section{Input Data}
-The input data of the recommendation system is a name of user who is considered to be recommended.
-This person is typically a user who has taken at least one course on the platform.
-The recommender is applied by 3 different techniques including of 1) TF-IDF and Linear Kernel 
-approach 2) Feature Ratings and KNN approach, 3) the combination of 2 previous approaches.
-
-\begin{figure}[H]
-\center
-\includegraphics[width=6in]{img/input.png}
-\caption{Input username}
-\end{figure}
-
-\newpage
-\section{Output Data}
-The output data of the recommendation system is a list of recommended courses for a given user. 
-The list is sorted by the score of the suggestions, which is calculated by one of the 3 techniques.
-The score is used to determine the relevance of the course to the user's profile.
-\begin{figure}[H]
-\center
-\includegraphics[width=6in]{img/output.png}
-\caption{Output recommended courses}
-\end{figure}
-
-\section{evaluation outcomes}
-
-We have selected the dataset to be used as follows
-\begin{figure}[H]
-\center
-\includegraphics[width=6in]{img/Data.png}
-\caption{Dataset to evaluation}
-\end{figure}
-
-\textbf{First approach}\\
-This approach is an entire content-based filtering technique that leverages the Term Frequency and Inverse Document Frequency to statistically measure the importance of words in the descriptions.
-
-The model achieved a Hit Rate accuracy of 14.69\%, signifying its effectiveness in predicting relevant items. Regarding the F1 Score, which balances precision and recall, the model attained an accuracy of 2.58\%, highlighting its overall performance in recommendation accuracy and error handling.
-
-\textbf{Second Approach}\\
-This approach involves using Feature Ratings and applying them to the K-Nearest Neighbors (KNN) algorithm in a recommendation system. However, this is a combination of content-based and collaborative filtering techniques.
-
-The model attained a Hit Rate accuracy of 48.24\%, demonstrating its capability to predict relevant items. In terms of the F1 Score, which considers precision and recall, the model achieved an accuracy of 7.92\%, indicating its overall performance in recommendation accuracy and error management.
-
-\textbf{Hybrid Approach}\\
-The third approach combines TF-IDF content analysis with feature-based KNN, resulting in accurate and personalized recommendations for users.
-
-The model achieved a Hit Rate accuracy of 69.18\%, indicating its effectiveness in predicting relevant items. The F1 Score, which balances precision and recall, stood at 11.62\%, reflecting its overall performance in recommendation accuracy and error minimization.

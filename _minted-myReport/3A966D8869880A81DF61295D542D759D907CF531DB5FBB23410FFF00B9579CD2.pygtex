@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{train}\PYG{p}{,} \PYG{n}{test} \PYG{o}{=} \PYG{n}{TfidfLinearKernel}\PYG{o}{.}\PYG{n}{train\PYGZus{}test\PYGZus{}split}\PYG{p}{(}\PYG{n}{ui\PYGZus{}data}\PYG{p}{)}
+\end{Verbatim}
