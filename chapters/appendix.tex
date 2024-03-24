@@ -1,0 +1,130 @@
+\chapter{The first appendix}
+
+This appendix provides additional technical details and information 
+related to the implementation of the \textsf{recommendation system} aimed at 
+facilitating course recommendations tailored to individual user 
+interests on e-Learning platforms.
+
+\section{Data Collection and Preprocessing}
+
+We collected user interaction data from the e-Learning platform, 
+including user ratings, course enrollments, and browsing history. 
+The data were preprocessed to remove duplicates, handle missing 
+values, and ensure consistency.
+
+\section{Content-Based Filtering}
+
+In the content-based filtering approach, we utilized the TF-IDF 
+(Term Frequency-Inverse Document Frequency) technique to extract 
+relevant features from course descriptions and user preferences. 
+We then applied feature weighting and cosine similarity to 
+recommend courses based on similarity to the user's preferences.
+
+\section{Collaborative Filtering}
+
+For collaborative filtering, we employed the K-Nearest Neighbors 
+(KNN) algorithm to identify similar users or courses based on their 
+interaction patterns. We calculated similarities between users or 
+courses and generated recommendations by considering the preferences 
+of similar users.
+
+\section{Hybrid Approach}
+
+The hybrid approach combines content-based and collaborative filtering 
+techniques to leverage the strengths of both methods. We integrated the 
+recommendations generated from both approaches using a weighted or ensemble 
+method to provide more personalized and accurate course suggestions.
+
+\section{Model Evaluation}
+
+We evaluated the performance of the recommendation system using standard 
+metrics such as accuracy, precision, recall, and F1-score. Additionally, 
+we conducted A/B testing or user studies to assess user satisfaction and 
+the effectiveness of the recommendations in improving the user experience 
+and content discovery on the e-Learning platform.
+
+\section{Implementation Code Snippets}
+
+Below are excerpts from the implementation code:
+
+\begin{minted}[frame=lines, linenos, fontsize=\footnotesize]{python}
+# Sample code snippet for content-based recommendation
+def content_based_recommendation(user_preferences, course_features, similarity_matrix, top_n=5):
+    # Compute user profile based on preferences
+    user_profile = compute_user_profile(user_preferences, course_features)
+    
+    # Calculate similarity between user profile and courses
+    similarity_scores = similarity_matrix.dot(user_profile)
+    
+    # Get top N recommended courses
+    top_courses_indices = np.argsort(similarity_scores)[::-1][:top_n]
+    top_courses = [course_names[i] for i in top_courses_indices]
+    
+    return top_courses
+\end{minted}
+
+\begin{minted}[frame=lines, linenos, fontsize=\footnotesize]{python}
+# Sample code snippet for collaborative filtering recommendation
+def collaborative_filtering_recommendation(user_id, user_course_matrix, similarity_matrix, course_names, top_n=5):
+    # Get user vector from user-course matrix
+    user_vector = user_course_matrix[user_id]
+    
+    # Calculate similarity between user and other users/courses
+    similarity_scores = similarity_matrix.dot(user_vector)
+    
+    # Get top N recommended courses
+    top_courses_indices = np.argsort(similarity_scores)[::-1][:top_n]
+    top_courses = [course_names[i] for i in top_courses_indices]
+    
+    return top_courses
+\end{minted}
+
+
+% Text for a section in the first appendix goes here.
+
+% test ทดสอบฟอนต์ serif ภาษาไทย
+
+% \textsf{test ทดสอบฟอนต์ sans serif ภาษาไทย}
+
+% \verb+test ทดสอบฟอนต์ teletype ภาษาไทย+
+
+% \texttt{test ทดสอบฟอนต์ teletype ภาษาไทย}
+
+% \textbf{ตัวหนา serif ภาษาไทย \textsf{sans serif ภาษาไทย} \texttt{teletype ภาษาไทย}}
+
+% \textit{ตัวเอียง serif ภาษาไทย \textsf{sans serif ภาษาไทย} \texttt{teletype ภาษาไทย}}
+
+% \textbf{\textit{ตัวหนาเอียง serif ภาษาไทย \textsf{sans serif ภาษาไทย} \texttt{teletype ภาษาไทย}}}
+
+% \url{https://www.example.com/test_ทดสอบ_url}
+
+\chapter{\ifenglish Manual\else คู่มือการใช้งานระบบ\fi}
+
+This appendix provides detailed information about the data collection and 
+preprocessing steps conducted as part of the recommendation system project.
+
+\section{Data Sources}
+
+We collected data from multiple sources to build our recommendation system, including 
+e-Learning platform logs, course metadata, and user profiles.
+
+\section{Data Preprocessing}
+
+The raw data underwent several preprocessing steps to ensure quality and consistency 
+such as removal of duplicates, handling missing values, data cleaning, and data normalization.
+
+\section{Feature Engineering}
+
+We engineered additional features from the raw data to enhance the recommendation system's 
+performance which consist of user-item interaction matrix, content features, and user profiles.
+
+\section{Data Exploration}
+
+Exploratory data analysis (EDA) was performed to gain insights into the dataset's characteristics
+including distribution of user ratings, course popularity, and user behavior patterns.
+
+\section{Data Integration}
+
+Finally, the preprocessed data were integrated into a unified dataset for model training and 
+evaluation. The integrated dataset included user profiles, item features, and user-item 
+interaction data necessary for building and testing the recommendation system.

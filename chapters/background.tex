@@ -1,0 +1,158 @@
+\chapter{\ifenglish Background Knowledge and Theory\else ทฤษฎีที่เกี่ยวข้อง\fi}
+
+This chapter provides an overview of \textit{e-Learning course recommendation systems}, focusing on 
+the application of machine learning techniques. It draws upon relevant research articles 
+to establish a comprehensive understanding of the topic, aiming to provide insight into 
+the intricacies of these systems and their relevance in the field of machine learning.
+
+\section{Problems}
+
+The primary challenge in e-Learning course recommendation systems is the inefficient presentation 
+of products to users, requiring them to make decisions to discern their needs or preferences. 
+To address this challenge, it is essential to consider the pros and cons of different approaches 
+and their practical behavior.
+
+\section{Content-Based Filtering}
+
+The first step is the \textit{Feature Rating}, where features describe users and items in a 
+recommendation system. This method works best when all items share the same set of features. 
+However, it's not suitable for items with different features. Compatibility across items' features 
+must be considered.
+
+In this case, content-based filtering assesses the relevance of courses based on their descriptions. 
+\textit{Term Frequency and Inverse Document Frequency (TF-IDF)} are implemented to calculate the weights of 
+courses' descriptions.
+
+\begin{enumerate}
+  \item \textbf{Term Frequency (TF):}
+  \begin{equation}
+    \text{tf(term, document)} = \frac{f(\text{term, document})}{\sum_{\text{term}' \in \text{document}} f(\text{term}', \text{document})}
+  \end{equation}
+  \item \textbf{Inverse Document Frequency (IDF):}
+  \begin{equation}
+    \text{idf(term, allDocuments)} = \log \left( \frac{N}{1 + \text{df}(t)} \right) + 1
+  \end{equation}
+  \item \textbf{TF-IDF (Term Frequency-Inverse Document Frequency):}
+  \begin{equation}
+    \text{tfidf(term, document)} = \text{tf(term, document)} \times \text{idf(term, allDocuments)}
+  \end{equation}
+\end{enumerate}
+
+\subsection{Advantages}
+\begin{enumerate}
+  \item \textsf{Quick processing as it focuses on individual users without considering others.}
+  \item \textsf{Capable of capturing specific interests of niche user groups.}
+\end{enumerate}
+
+\subsection{Disadvantages}
+\begin{enumerate}
+  \item \textsf{Results depend on feature definition and user knowledge.}
+  \item \textsf{Limited to the user's current interests, lacking the ability to expand interests.}
+\end{enumerate}
+
+\section{Collaborative Filtering}
+Collaborative filtering recommends items based on the ratings of similar users. 
+\textit{K-Nearest Neighbors (KNN)} is employed for this purpose.
+
+\subsubsection{K-Nearest Neighbors (KNN):} 
+
+\begin{itemize}
+  \item \texttt{Constructs a user-item matrix.}
+  \item \texttt{Calculates cosine distances between courses.}
+  \item \texttt{Selects top similar courses based on cosine distances.}
+\end{itemize}
+  
+\subsection{Advantages}
+\begin{enumerate}
+  \item \textsf{Does not require feature definition.}
+  \item \textsf{Can recommend different items without specifying features.}
+\end{enumerate}
+
+\subsection{Disadvantages}
+\begin{enumerate}
+  \item \textsf{New items may not be recommended until users rate them.}
+  \item \textsf{Accuracy decreases in sparse matrices.}
+  \item \textsf{Tends to recommend popular courses over less attended ones.}
+\end{enumerate}
+
+\section{Hybrid Filtering}
+
+One common thread in recommender systems is the need to combine recommendation techniques to 
+achieve peak performance. All of the known recommendation techniques in different ways.
+
+\begin{table}[H]
+\center
+\begin{tabular}{ p{3cm} p{3cm} p{3cm} p{3cm}  }
+  \hline
+  \textbf{Technique} &\textbf{Background} &\textbf{Input } &\textbf{Process} \\
+  \hline
+  Collaborative &Ratings from U of items in I. &Ratings from u of items in I. &Identify users in U similar to u, and extrapolate from their ratings of i. \\
+  Content-based &Features of items in I   &u`s ratings of items in I &Generate a classifier that fits u`s rating behavior and use it on i. \\
+  Demographic &Demographic information about U and their ratings of items in I. & Demographic information about u &Identify users that are demographically similar to u, and extrapolate from their ratings of i. \\
+  Utility-based &Features of items in I. &A utility function over items in I that describes u`s preferences. &Apply the function to the items and determine i`s rank. \\
+  Knowledge-based &Features of items in I. Knowledge of how these items meet a user`s needs. &A description of u`s needs or interests. &Infer a match between i and u`s need.\\
+  \hline
+\end{tabular}
+\caption{Recommendation Techniques.}
+\end{table}
+
+\textit{Hybrid recommendation systems} combine multiple techniques to enhance performance 
+by customizing recommendations based on specific conditions and dataset requirements.
+
+\section{\ifenglish%
+\ifcpe CPE \else ISNE \fi knowledge used, applied, or integrated in this project
+\else%
+ความรู้ตามหลักสูตรซึ่งถูกนำมาใช้หรือบูรณาการในโครงงาน
+\fi
+}
+
+Various aspects of Computer Engineering knowledge are integrated into the project, including basic programming, object-oriented programming, data structures and algorithms, and fundamentals of database systems.
+Some of the key areas of knowledge applied include:
+
+\subsection{Basic Computer Programming for Information Systems and Network Engineering}
+
+C++ enables efficient algorithm implementation and performance optimization for 
+recommendation systems. Basic programming skills aid in data preprocessing and custom 
+component development. Additionally, C++ facilitates integration with existing systems 
+and supports parallelization for improved computational efficiency.
+
+\subsection{Object-Oriented Programming}
+
+Object-Oriented Programming (OOP) allows for modular design, facilitating the organization 
+of recommendation system components into reusable and understandable classes. 
+Encapsulation ensures data integrity and abstraction simplifies complex algorithms, 
+enhancing maintainability and scalability.
+
+\subsection{Data Structures and Algorithms}
+
+Data Structures optimize storage and retrieval of user-item interactions, enhancing 
+recommendation efficiency. Algorithms like collaborative filtering or matrix factorization 
+enable personalized recommendations based on user preferences. Efficient implementation of 
+sorting and searching algorithms enhances recommendation performance, ensuring timely and 
+relevant suggestions.
+
+\subsection{Fundamentals of Database Systems}
+
+Understanding database fundamentals aids in designing efficient storage schemas for user 
+preferences, item attributes, and interaction data. Proficiency in database management 
+ensures robust data retrieval and manipulation, supporting accurate recommendation generation. 
+Knowledge of transaction management and concurrency control enhances data integrity and 
+system reliability in handling user interactions.
+
+\section{\ifenglish%
+Extracurricular knowledge used, applied, or integrated in this project
+\else%
+ความรู้นอกหลักสูตรซึ่งถูกนำมาใช้หรือบูรณาการในโครงงาน
+\fi
+}
+
+Understanding Python programming is crucial for our project since we'll be primarily using it 
+to develop the recommendation system. Additionally, familiarizing ourselves with various 
+libraries is essential, as they are key tools for implementing different functionalities 
+within the system. Selecting and utilizing the right libraries will be pivotal in ensuring 
+the effectiveness and efficiency of our system.
+
+To achieve this, it is vital to have in-depth knowledge of data analysis, machine learning, 
+and generative AI. These areas will help us understand the configuration, behavior, and 
+characteristics of user items from large datasets. Thus, enabling us to provide personalized 
+recommendations by learning from the data.

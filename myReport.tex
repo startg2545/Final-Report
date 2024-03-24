@@ -1,0 +1,117 @@
+\documentclass[final,isne,project]{cpecmu}
+
+\projectNo{P701-2}
+\acadyear{2024}
+
+\titleTH{ระบบช่วยแนะนำ}
+\titleEN{Recommendation System}
+
+\author{นายเนวิน ยามากุชิ}{Newin Yamaguchi}{630615028}
+\author{นางสาวพัชราภรณ์ สท้านไตรภพ}{Patcharaporn Satantaipop}{630615035}
+
+\cpeadvisor{kampol}
+\cpecommittee{yuthapong}
+\cpecommittee{kenneth}
+
+\usepackage[final]{graphicx}
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[colorlinks=true,allcolors=Blue4,citecolor=red,linktoc=all]{hyperref}
+\def\UrlLeft#1\UrlRight{$#1$}
+
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{afterpage}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{minted}
+\usemintedstyle{colorful}
+
+\bibliographystyle{plain}
+
+\ifglossary
+  \newglossaryentry{lorem ipsum}{
+    name=lorem ipsum,
+    description={derived from Latin dolorem ipsum, translated as ``pain itself''}
+  }
+\fi
+
+\begin{document}
+\include{chapters/frontmatter}
+
+\pagestyle{empty}\cleardoublepage
+\normalspacing \setcounter{page}{1} \pagenumbering{arabic} \pagestyle{cpecmu}
+
+\include{chapters/intro}
+\include{chapters/background}
+\include{chapters/approach}
+\include{chapters/eval}
+\ifproject
+\include{chapters/conclusion}
+\fi
+
+\bibliography{myReport}
+
+\ifproject
+
+\normalspacing
+\appendix
+\include{chapters/appendix}
+
+\ifglossary\glossarypage\fi
+
+\ifindex\indexpage\fi
+
+\begin{biosketch}
+\begin{figure}[H]
+\center
+  \begin{minipage}{0.45\textwidth}
+    \begin{center}
+      \includegraphics[width=1.5in]{./img/newin_photo.jpg}
+    \end{center}
+    \begin{center}
+      \textsf{Name: Newin Yamaguchi} \\
+      \textsf{Affiliation: Chiang Mai University} \\
+    \end{center}
+  \end{minipage}
+  \begin{minipage}{0.45\textwidth}
+    \begin{center}
+      \includegraphics[width=1.5in]{./img/may_photo.jpg}
+    \end{center}
+    \begin{center}
+      \textsf{Name: Patcharaporn Satantaipop} \\
+      \textsf{Affiliation: Chiang Mai University} \\
+    \end{center}
+  \end{minipage}
+\end{figure}
+
+\textsf{Newin and Patcharaporn are students at the Department of Computer 
+Engineering, Chiang Mai University, specializing in machine learning 
+and algorithms. We are currently in the fourth-year of Bachelor's Degree.
+With a passion for data science, we have dedicated our career to 
+exploring innovative solutions to motivate students to become more
+addicted to self-learning.}
+
+\textsf{Our current project focuses on the development of a Recommendation 
+System for e-Learning platforms. Recognizing the challenges associated 
+with online learning. We aim to investigate diverse models to facilitate 
+course recommendations tailored to individual user interests. By leveraging 
+a hybrid approach that combines content-based and collaborative filtering 
+techniques, we aim to enhance the content discovery process and improve user 
+satisfaction in online education.}
+
+\textsf{Overall, Newin and Patcharaporn are dedicated and driven researchers 
+committed to making meaningful contributions to the field of Computer 
+Engineering. Our recommendation system project for e-Learning 
+platforms represents an ongoing commitment to improving online 
+education and enhancing the learning experience for students worldwide.}
+\end{biosketch}
+
+\fi
+
+\end{document}
