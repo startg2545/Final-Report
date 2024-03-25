@@ -501,9 +501,8 @@ Nevertheless, the process of recommendation is the same as the KNN approach.
 
 \section{Evaluation}
 
-Evaluation helps you assess how well your recommendation system is performing. It 
-allows you to measure the accuracy of the recommendations made by the model and 
-understand its effectiveness in suggesting relevant courses to users.
+By following this evaluation process, developers and researchers can measure and improve the 
+effectiveness of recommendation systems in providing personalized and relevant recommendations to users.
 
 \begin{enumerate}
     \item \textsf{Consider users who have taken more than one course.}
@@ -516,10 +515,8 @@ understand its effectiveness in suggesting relevant courses to users.
 
 \subsection{Training and Testing}
 
-Training and testing allow you to evaluate the performance of your recommendation system. 
-By training the model on a subset of data and testing it on another subset that it hasn't 
-seen during training, you can assess how well the model generalizes to new data. This helps 
-in understanding if the recommendations made by the system are accurate and relevant.
+In designing the training and testing split, several considerations can be made to ensure an effective 
+evaluation of the recommendation system. These considerations include:
 
 \begin{enumerate}
     \item \textsf{\textbf{Consider only users who have taken ore than 1 course: }
@@ -534,7 +531,6 @@ in understanding if the recommendations made by the system are accurate and rele
 There are two performance measurements in total including \textit{hit rate} and \textit{f1 score}.
 
 \subsubsection{Hit Rate}
-The performance of models is evaluated by predicting a certain number of courses for each user in the training dataset. Then, for each user in the test dataset, it will check if any of the courses they actually took are among the N predicted courses. if at least one of the predicted courses matches a course taken by the user in the test dataset, it is considered as a Hit. 
 Hit Rate is calculated as follows:
 
 \begin{equation}
@@ -545,19 +541,19 @@ Hit Rate is calculated as follows:
 
 
 \subsubsection{F1 Score}
-This is a metric used to evaluate the performance of a classification model. It measures the proportion of true positive predictions among all positive predictions made by the model and measures the proportion of true positive predictions among all actual positive cases in the data simultaneously.
-To find the F1 Score from Recall and Precision, Recall, Precision, and F1 Score can use the following formulas:
+
+Recall, Precision, and F1 Score can use the following formulas:
 
 \begin{equation}
-    \text{Recall} = \frac{\texttt{Number of correctly predicted items}}{\texttt{Total number of relevant items}}
+    Recall = \frac{\texttt{Number of correctly predicted items}}{\texttt{Total number of relevant items}}
 \end{equation}
 
 \begin{equation}
-    \text{Precision} = \frac{\texttt{Number of correctly predicted items}}{\texttt{Total number of recommended items}}
+    Precision = \frac{\texttt{Number of correctly predicted items}}{\texttt{Total number of recommended items}}
 \end{equation}
 
 \begin{equation}
-    \text{F1} = \frac{2⋅Precision⋅Recall}{Precision+Recall}
+    F1\_score = \frac{2⋅Precision⋅Recall}{Precision+Recall}
 \end{equation}
 
 \begin{itemize}
@@ -569,7 +565,7 @@ To find the F1 Score from Recall and Precision, Recall, Precision, and F1 Score 
 \noindent To find the average F1 score from all users by
 
 \begin{equation}
-    \text{$F1_{average}$} = \frac{\sum_{i=1}^{n}F1_{i}}{\texttt{Number of Users}}
+    \text{$F1\_score_{average}$} = \frac{\sum_{i=1}^{n}F1\_score_{i}}{\texttt{Number of Users}}
 \end{equation}
 
 \noindent The harmonic mean nature makes sure if either Precision or Recall has a really high value, then it does not dominate the score. F1 Score has a high value when both precision and recall values are close to 1.
