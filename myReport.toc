@@ -72,14 +72,14 @@
 \contentsline {section}{\numberline {5.2}Challenges}{21}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Suggestions and further improvements }{22}{section.5.3}%
 \contentsline {chapter}{References}{23}{section*.15}%
-\contentsline {chapter}{\numberline {A}Technical Implementation Details}{25}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Data Collection and Preprocessing}{25}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Content-Based Filtering}{25}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Collaborative Filtering}{25}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Hybrid Approach}{25}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Model Evaluation}{25}{section.A.5}%
-\contentsline {chapter}{\numberline {B}Model Training and Evaluation}{26}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Model Training}{26}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Evaluation Metrics}{26}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Challenges and Solutions}{26}{section.B.3}%
-\contentsline {chapter}{Biographical Sketch}{27}{appendix*.17}%
+\contentsline {chapter}{\numberline {A}Technical Implementation Details}{26}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Data Collection and Preprocessing}{26}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Content-Based Filtering}{26}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Collaborative Filtering}{26}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Hybrid Approach}{26}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Model Evaluation}{26}{section.A.5}%
+\contentsline {chapter}{\numberline {B}Model Training and Evaluation}{27}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Model Training}{27}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Evaluation Metrics}{27}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Challenges and Solutions}{27}{section.B.3}%
+\contentsline {chapter}{Biographical Sketch}{28}{appendix*.17}%

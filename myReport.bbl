@@ -37,6 +37,13 @@ S.~Bhaskaran and B.~Santhi.
   strategy for e-learning system in cloud computing.
 \newblock {\em Cluster Computing}, 22(1):1137--1149, 2019.
 
+\bibitem{Tan2008}
+H.~Tan, J.~Guo, and Y.~Li.
+\newblock E-learning recommendation system.
+\newblock In {\em Proceedings of the International Conference on Computer
+  Science and Software Engineering}, pages 430--433, Wuhan, China, December
+  2008.
+
 \bibitem{Sharma2013}
 L.~Sharma.
 \newblock A survey of recommendation system.
@@ -69,11 +76,6 @@ Hualong Ma, Xiande Wang, Jianfeng Hou, and Yunjun Lu.
 \newblock In {\em 2017 3rd IEEE International Conference on Control Science and
   Systems Engineering (ICCSSE)}, pages 638--641, 2017.
 
-\bibitem{Aguilar2017}
-J.~Aguilar, P.~Valdiviezo-Diaz, and G.~Riofrio.
-\newblock A general framework for intelligent recommender systems.
-\newblock {\em Applied Computing and Informatics}, 13(2):147--160, 2017.
-
 \bibitem{10.1007/978-3-030-66840-2_21}
 Rajae Zriaa and Said Amali.
 \newblock A comparative study between k-nearest neighbors and k-means
@@ -82,6 +84,33 @@ Rajae Zriaa and Said Amali.
   Olga Sergeyeva, and Anouar~Abdelhakim Boudhir, editors, {\em Innovations in
   Smart Cities Applications Volume 4}, pages 268--282, Cham, 2021. Springer
   International Publishing.
+  
+\bibitem{Shen2020}
+J.~Shen, T.~Zhou, and L.~Chen.
+\newblock Collaborative filtering-based recommendation system for big data.
+\newblock {\em International Journal of Computational Science and Engineering},
+  21(2):219--225, 2020.
+  
+\bibitem{Thakkar2019}
+P. Thakkar, K. Varma, V. Ukani, S. Mankad, and S. Tanwar.
+\newblock Combining user-based and item-based collaborative filtering using machine learning.
+\newblock In {\em Information and Communication Technology for Intelligent Systems}, pages 173-180. Springer, Singapore, 2019.
+
+\bibitem{Xiao2018}
+J.~Xiao, M.~Wang, B.~Jiang, and J.~Li.
+\newblock A personalized recommendation system with combinational algorithm
+
+\bibitem{5628917}
+Freddy Lécué.
+\newblock Combining collaborative filtering and semantic content-based
+  approaches to recommend web services.
+\newblock In {\em 2010 IEEE Fourth International Conference on Semantic
+  Computing}, pages 200--205, 2010.
+
+\bibitem{Lin2018}
+J. Lin, H. Pu, Y. Li, and J. Lian.
+\newblock Intelligent recommendation system for course selection in smart education.
+\newblock {\em Procedia Computer Science}, 129:449-453, 2018.
 
 \bibitem{AvinashRSonule2020UnswNb15DA}
 AvinashR.Sonule, Mukesh Kalla, Amit Jain, and Deepak~Singh Chouhan.
@@ -96,18 +125,20 @@ Nitish~K. Panigrahy, Jian Li, and Don Towsley.
 \newblock {\em ACM SIGMETRICS Performance Evaluation Review}, 45(2):21--23,
   2017.
 
-\bibitem{Shen2020}
-J.~Shen, T.~Zhou, and L.~Chen.
-\newblock Collaborative filtering-based recommendation system for big data.
-\newblock {\em International Journal of Computational Science and Engineering},
-  21(2):219--225, 2020.
+\bibitem{yacouby-axman-2020-probabilistic}
+Reda Yacouby and Dustin Axman.
+\newblock Probabilistic Extension of Precision, Recall, and F1 Score for More Thorough Evaluation of Classification Models.
+\newblock In Steffen Eger, Yang Gao, Maxime Peyrard, Wei Zhao, and Eduard Hovy, editors, {\em Proceedings of the First Workshop on Evaluation and Comparison of NLP Systems}, pages 79--91, Online, November 2020. Association for Computational Linguistics.
 
-\bibitem{Tan2008}
-H.~Tan, J.~Guo, and Y.~Li.
-\newblock E-learning recommendation system.
-\newblock In {\em Proceedings of the International Conference on Computer
-  Science and Software Engineering}, pages 430--433, Wuhan, China, December
-  2008.
+\bibitem{Xu2019}
+G. Xu, A. Zhai, J. Wang, Z. Zhang, and X. Li.
+\newblock Cross-media semantic matching based on sparse representation.
+\newblock {\em Technical Gazette}, 26(6):170-1713, 2019.
+
+\bibitem{Aguilar2017}
+J.~Aguilar, P.~Valdiviezo-Diaz, and G.~Riofrio.
+\newblock A general framework for intelligent recommender systems.
+\newblock {\em Applied Computing and Informatics}, 13(2):147--160, 2017.
 
 \bibitem{Tian2019}
 Y.~Tian, B.~Zheng, Y.~Wang, Y.~Zhang, and Q.~Wu.
@@ -115,16 +146,9 @@ Y.~Tian, B.~Zheng, Y.~Wang, Y.~Zhang, and Q.~Wu.
   recommendation algorithm.
 \newblock {\em Procedia CIRP}, 83:490--494, 2019.
 
-\bibitem{5628917}
-Freddy Lécué.
-\newblock Combining collaborative filtering and semantic content-based
-  approaches to recommend web services.
-\newblock In {\em 2010 IEEE Fourth International Conference on Semantic
-  Computing}, pages 200--205, 2010.
-
-\bibitem{Xiao2018}
-J.~Xiao, M.~Wang, B.~Jiang, and J.~Li.
-\newblock A personalized recommendation system with combinational algorithm
-
+\bibitem{Gope2017}
+J. Gope and S. Jain.
+\newblock A survey on solving cold start problem in recommender systems.
+\newblock In {\em Proceedings of the 2017 International Conference on Computing, Communication and Automation (ICCCA)}, pages 133-138, Greater Noida, India, 2017.
 
 \end{thebibliography}
