@@ -1,0 +1,130 @@
+\begin{thebibliography}{10}
+
+\bibitem{Liu2020}
+Y.~Liu, H.~Yang, G.~Sun, and S.~Bin.
+\newblock Collaborative filtering recommendation algorithm based on
+  multi-relationship social network.
+\newblock {\em Ingenierie des Systemes d'Information}, 25(3):359--364, 2020.
+
+\bibitem{Wong2007}
+Dominic Wong.
+\newblock A critical literature review on e-learning limitations.
+\newblock {\em Journal for the Advancement of Science and Arts}, 2(1):55--62,
+  2007.
+
+\bibitem{Zhang2021}
+Q.~Zhang, Y.~Liu, L.~Liu, S.~Lu, Y.~Feng, and X.~Yu.
+\newblock Location identification and personalized recommendation of tourist
+  attractions based on image processing.
+\newblock {\em Traitement du Signal}, 38(1):197--205, 2021.
+
+\bibitem{CNNIC2020}
+China Internet Network Information~Center (CNNIC).
+\newblock The 46th statistical report on the current situation of internet
+  development in china.
+\newblock Technical report, China Internet Network Information Center (CNNIC),
+  Beijing, China, 2020.
+
+\bibitem{5432716}
+Mustansar~Ali Ghazanfar and Adam Prugel-Bennett.
+\newblock A scalable, accurate hybrid recommender system.
+\newblock In {\em 2010 Third International Conference on Knowledge Discovery
+  and Data Mining}, pages 94--98, 2010.
+
+\bibitem{Bhaskaran2019}
+S.~Bhaskaran and B.~Santhi.
+\newblock An efficient personalized trust based hybrid recommendation (tbhr)
+  strategy for e-learning system in cloud computing.
+\newblock {\em Cluster Computing}, 22(1):1137--1149, 2019.
+
+\bibitem{Sharma2013}
+L.~Sharma.
+\newblock A survey of recommendation system.
+\newblock {\em Int. J. Eng. Trends Technol.}, 4:1989--1992, 2013.
+
+\bibitem{Shishenhchi2010}
+S.~Shishenhchi, S.Y. Banihashem, and N.A.M. Zin.
+\newblock A proposed semantic recommendation system for e-learning: A rule and
+  ontology based e-learning recommendation system.
+\newblock In {\em Proceedings of the International Symposium on Information
+  Technology}, pages 1--5, Kuala Lumpur, Malaysia, June 2010.
+
+\bibitem{Khanal2020}
+S.S. Khanal, P.W.C. Prasad, A.~Alsadoon, and A.~Maag.
+\newblock A systematic review: Machine learning based recommendation systems
+  for e-learning.
+\newblock {\em Educ. Inf. Technol.}, 25:2635--2664, 2020.
+
+\bibitem{features}
+Xu~Chen, Zheng Qin, Yongfeng Zhang, and Tao Xu.
+\newblock Learning to rank features for recommendation over multiple
+  categories.
+\newblock In {\em Proceedings of the 39th International ACM SIGIR Conference on
+  Research and Development in Information Retrieval}, SIGIR '16, page
+  305–314, New York, NY, USA, 2016. Association for Computing Machinery.
+
+\bibitem{tfidf}
+Hualong Ma, Xiande Wang, Jianfeng Hou, and Yunjun Lu.
+\newblock Course recommendation based on semantic similarity analysis.
+\newblock In {\em 2017 3rd IEEE International Conference on Control Science and
+  Systems Engineering (ICCSSE)}, pages 638--641, 2017.
+
+\bibitem{Aguilar2017}
+J.~Aguilar, P.~Valdiviezo-Diaz, and G.~Riofrio.
+\newblock A general framework for intelligent recommender systems.
+\newblock {\em Applied Computing and Informatics}, 13(2):147--160, 2017.
+
+\bibitem{10.1007/978-3-030-66840-2_21}
+Rajae Zriaa and Said Amali.
+\newblock A comparative study between k-nearest neighbors and k-means
+  clustering techniques of collaborative filtering in e-learning environment.
+\newblock In Mohamed Ben~Ahmed, {\.{I}}smail Rak{\i}p~Karaș, Domingos Santos,
+  Olga Sergeyeva, and Anouar~Abdelhakim Boudhir, editors, {\em Innovations in
+  Smart Cities Applications Volume 4}, pages 268--282, Cham, 2021. Springer
+  International Publishing.
+
+\bibitem{AvinashRSonule2020UnswNb15DA}
+AvinashR.Sonule, Mukesh Kalla, Amit Jain, and Deepak~Singh Chouhan.
+\newblock Unsw-nb15 dataset and machine learning based intrusion detection
+  systems.
+\newblock {\em International Journal of Engineering and Advanced Technology},
+  2020.
+
+\bibitem{Panigrahy2017}
+Nitish~K. Panigrahy, Jian Li, and Don Towsley.
+\newblock Hit rate vs. hit probability based cache utility maximization.
+\newblock {\em ACM SIGMETRICS Performance Evaluation Review}, 45(2):21--23,
+  2017.
+
+\bibitem{Shen2020}
+J.~Shen, T.~Zhou, and L.~Chen.
+\newblock Collaborative filtering-based recommendation system for big data.
+\newblock {\em International Journal of Computational Science and Engineering},
+  21(2):219--225, 2020.
+
+\bibitem{Tan2008}
+H.~Tan, J.~Guo, and Y.~Li.
+\newblock E-learning recommendation system.
+\newblock In {\em Proceedings of the International Conference on Computer
+  Science and Software Engineering}, pages 430--433, Wuhan, China, December
+  2008.
+
+\bibitem{Tian2019}
+Y.~Tian, B.~Zheng, Y.~Wang, Y.~Zhang, and Q.~Wu.
+\newblock College library personalized recommendation system based on hybrid
+  recommendation algorithm.
+\newblock {\em Procedia CIRP}, 83:490--494, 2019.
+
+\bibitem{5628917}
+Freddy Lécué.
+\newblock Combining collaborative filtering and semantic content-based
+  approaches to recommend web services.
+\newblock In {\em 2010 IEEE Fourth International Conference on Semantic
+  Computing}, pages 200--205, 2010.
+
+\bibitem{Xiao2018}
+J.~Xiao, M.~Wang, B.~Jiang, and J.~Li.
+\newblock A personalized recommendation system with combinational algorithm
+
+
+\end{thebibliography}
