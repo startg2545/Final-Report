@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{first\PYGZus{}model} \PYG{o}{=} \PYG{n}{TfidfLinearKernel}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{i\PYGZus{}data}\PYG{p}{)}
+\PYG{n}{second\PYGZus{}model} \PYG{o}{=} \PYG{n}{FeatureRatingsKNN}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{train}\PYG{p}{)}
+\PYG{n}{hybrid\PYGZus{}model} \PYG{o}{=} \PYG{n}{Hybrid}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{i\PYGZus{}data}\PYG{p}{,} \PYG{n}{train}\PYG{p}{)}
+\end{Verbatim}

@@ -5,85 +5,195 @@
 \fi}
 
 In this section, we delve into the experimentation phase of our project, where 
-the proposed methodologies were put to the test, and their efficacy was evaluated. 
-The primary objective was to assess the performance and suitability of the 
+the proposed methodologies were put to the test, and their efficiency was 
+evaluated. The primary objective is to assess the performance of the 
 recommendation system in providing personalized course recommendations to users.
 
 \section{Data Preparation}
 
-\subsection{Import Datasets}
-The dataset provided by the developer is required to be a csv format and consists of two main components:
+In this section, we import classes from the isne\_recommendation module 
+that we will use to assess the model's performance and import the datasets 
+necessary for our evaluation.
+
+\subsection{Import the classes}
+
+Import one or more classes from the isne\_recommendation module that originally 
+were hosted on Python Package Index (PyPI) and now are available on GitHub. 
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+from isne_recommendation import TfidfLinearKernel, FeatureRatingsKNN, Hybrid
+\end{minted}
+
+\subsection{Import datasets}
+
+The dataset provided by the developer is needed to be a csv format and consists of two main components:
+
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
 import pandas as pd
 i_data = pd.read_csv('https://startg2545.github.io/item_tutorial.csv')
 ui_data = pd.read_csv('https://startg2545.github.io/user_item_tutorial.csv')
 \end{minted}
 
-\subsection{Import the Classes}
+\section{Extract a user dataset}
 
-First of all, import one of these classes from the isne\_recommendation 
-module that you desire to evaluate the model.
-
-\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
-from isne_recommendation import TfidfLinearKernel, FeatureRatingsKNN, Hybrid
-\end{minted}
-
-\subsection{Fit the Model}
-
-The fit function is responsible for adjusting the internal parameters of the model 
-to minimize the difference between the predicted outputs and the actual outputs 
-(also known as the ground truth) in the training data.
+It is crucial to split the dataset into training and testing sets to erase the 
+test data from model's memories.
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
-model = TfidfLinearKernel.fit(i_data)
-model = FeatureRatingsKNN.fit(ui_data)
-model = Hybrid.fit(i_data, ui_data)
+train, test = TfidfLinearKernel.train_test_split(ui_data, test_size=0.2)
 \end{minted}
+
+\section{Fit the model}
+
+The next step is to train the model using the training dataset.
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+first_model = TfidfLinearKernel.fit(i_data)
+second_model = FeatureRatingsKNN.fit(train)
+hybrid_model = Hybrid.fit(i_data, train)
+\end{minted}
+
+\section{Predict the model}
+
+To evaluate the accuracy of all approaches, we need to predict recommendations for all 
+users, analyze them, then incorporate them into the performance assessment.
+
+Let's take an example of a user named \textit{Tracy Marchant} below:
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+# This compares the model's predictions against the actual preferences in the test set.
+true = test[test['username'] == 'Tracy Marchant']['course']  # actual preferences
+first_prediction = TfidfLinearKernel.predict('Tracy Marchant', i_data, train, first_model, 10)
+second_prediction = FeatureRatingsKNN.predict('Tracy Marchant', train, second_model, 10)
+hybrid_prediction = Hybrid.predict('Tracy Marchant', i_data, train, hybrid_model, 10)
+\end{minted}
+
+\section{Observe the results}
+
+This user has taken totally six courses, and the \textit{test\_size} is 20\%, 
+so the test set contains two courses by rounding.
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+true
+\end{minted}
+
+\begin{table}[H]
+\small
+\begin{tabular}{|p{0.5cm}|p{10cm}|}
+\hline
+& Course \\
+\hline
+647 & Introduction to English Common Law \\
+645 & Retrieve Data using Single-Table SQL Queries \\
+\hline
+\end{tabular}
+\end{table}
 
 \newpage
-\section{Split the Data for training and testing}
-
-The \textit{train-test split} is a common technique used in machine learning to evaluate the 
-performance of a model on unseen data. This technique involves splitting the dataset 
-into two subsets: one for training the model and another for testing its performance
+\noindent The first approach recommends the following courses:
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
-train, test = TfidfLinearKernel.train_test_split(ui_data)
+first_prediction
 \end{minted}
 
-\section{Evaluate the model}
+\begin{table}[H]
+\small
+\begin{tabular}{|p{0.5cm}|p{10cm}|p{1.5cm}|}
+\hline
+& Course & Score \\
+\hline
+79 & Write A Feature Length Screenplay For Film Or Television & 0.2627 \\
+8 & COVID-19 - A clinical update & 0.2559 \\
+43 & Introduction to International Criminal Law & 0.2535 \\
+40 & Health Care IT: Challenges and Opportunities & 0.2400 \\
+3 & Biomedical Visualisation & 0.2353 \\
+67 & Sharpened Visions: A Poetry Workshop & 0.2334 \\
+22 & EU policy and implementation: making Europe work! & 0.2303 \\
+62 & Python and Machine Learning for Asset Management & 0.2301 \\
+17 & Design and Analyze Secure Networked Systems & 0.2262 \\
+68 & Social Media Management & 0.2217 \\
+\hline
+\end{tabular}
+\end{table}
 
-Model evaluation is a crucial step in machine learning to assess the performance and 
-effectiveness of a trained model on unseen data. The model evaluation function involves 
-using various metrics and techniques to measure how well the model generalizes to new data.
+\noindent The second approach recommends the following courses:
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
-# Calculate the hit rate of the model
-hit_rate = TfidfLinearKernel.hit_rate(train, test, i_data, model)
-hit_rate = FeatureRatingsKNN.hit_rate(train, test, model)
-hit_rate = Hybrid.hit_rate(train, test, i_data, model)
-# Calculate the F1 score of the model
-f1_score = TfidfLinearKernel.f1_score(train, test, i_data, model)
-f1_score = FeatureRatingsKNN.f1_score(train, test, model)
-f1_score = Hybrid.f1_score(train, test, i_data, model)
+second_prediction
 \end{minted}
 
-\section{Performance Evaluation}
+\begin{table}[H]
+\small
+\begin{tabular}{|p{0.5cm}|p{10cm}|p{1.5cm}|p{1.5cm}|}
+\hline
+& Course & Cosine Distance & Score \\
+\hline
+0 & The Product Lifecycle: A Guide from start to finish & 0.7808 & 0.2191 \\
+2 & Retrieve Data using Single-Table SQL Queries & 0.6214 & 0.3785 \\
+\hline
+\end{tabular}
+\end{table}
 
-\begin{enumerate}
-    \item \textbf{First Approach}:
-    \begin{itemize}
-        \item Hit Rate Accuracy: 14.69\%
-        \item F1 Score Accuracy: 2.58\%
-    \end{itemize}
-    \item \textbf{Second Approach}:
-    \begin{itemize}
-        \item Hit Rate Accuracy: 48.24\%
-        \item F1 Score Accuracy: 7.92\%
-    \end{itemize}
-    \item \textbf{Hybrid Approach}:
-    \begin{itemize}
-        \item Hit Rate Accuracy: 69.18\%
-        \item F1 Score Accuracy: 11.62\%
-    \end{itemize}
-\end{enumerate}
+\noindent The hybrid approach recommends the following courses:
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+hybrid_prediction
+\end{minted}
+
+\begin{table}[H]
+\small
+\begin{tabular}{|p{0.5cm}|p{10cm}|p{1.5cm}|}
+\hline
+& Course & Score \\
+\hline
+43 & Retrieve Data using Single-Table SQL Queries & 0.5920 \\
+46 & The Product Lifecycle: A Guide from start to finish & 0.2088 \\
+15 & Digitalisation in Space Research & 0.1745 \\
+9 & Collaborate on Files in Slack: Local \& Google Drive Integrations & 0.1670 \\
+41 & Python and Machine Learning for Asset Management & 0.1134 \\
+18 & EU policy and implementation: making Europe work! & 0.0855 \\
+1 & Addiction Treatment: Clinical Skills for Healthcare Providers & 0.0794 \\
+48 & Water Supply and Sanitation Policy in Developing Countries Part 1: Understanding Complex Problems & 0.0769 \\
+8 & Coaching Practices & 0.0764 \\
+25 & Fundamental Neuroscience for Neuroimaging & 0.0711 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Calculate the accuracy}
+
+\subsection{Tracy Marchant}
+
+\subsubsection{Hit Rate}
+
+\begin{itemize}
+    \item \textbf{First Approach}: \textit{Miss}, a predicted course does not appear in the actual preferences
+    \item \textbf{Second Approach}: \textit{Hit}, a predicted course appears in the actual preferences
+    \item \textbf{Hybrid Approach}: \textit{Hit}, a predicted course appears in the actual preferences
+\end{itemize}
+
+\subsubsection{F1 Score}
+
+\begin{itemize}
+    \item \textbf{First Approach}: \textit{Precision} = 0.0, \textit{Recall} = 0.0, \textit{F1 Score} = 0.0
+    \item \textbf{Second Approach}: \textit{Precision} = 0.5, \textit{Recall} = 0.5, \textit{F1 Score} = 0.5
+    \item \textbf{Hybrid Approach}: \textit{Precision} = 0.1, \textit{Recall} = 0.5, \textit{F1 Score} = 0.1667
+\end{itemize}
+
+\subsection{All users}
+
+\subsubsection{Hit Rate}
+
+\begin{itemize}
+    \item \textbf{First Approach}: \textit{Hit Rate Accuracy} = 14.69\%
+    \item \textbf{Second Approach}: \textit{Hit Rate Accuracy} = 48.24\%
+    \item \textbf{Hybrid Approach}: \textit{Hit Rate Accuracy} = 69.18\%
+\end{itemize}
+
+\subsubsection{F1 Score}
+
+\begin{itemize}
+    \item \textbf{First Approach}: \textit{F1 Score Accuracy} = 2.58\%
+    \item \textbf{Second Approach}: \textit{F1 Score Accuracy} = 7.92\%
+    \item \textbf{Hybrid Approach}: \textit{F1 Score Accuracy} = 11.62\%
+\end{itemize}

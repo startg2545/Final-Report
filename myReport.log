@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  25 MAR 2024 16:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  26 MAR 2024 18:22
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1437,11 +1437,11 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
 
 
 
-])
+] [6])
 \tf@toc=\write7
 \openout7 = `myReport.toc'.
 
- [6] (./myReport.lof
+ [7] (./myReport.lof
 LaTeX Info: Redefining \rmfamily on input line 2.
 LaTeX Info: Redefining \sffamily on input line 2.
 LaTeX Info: Redefining \ttfamily on input line 2.
@@ -1500,7 +1500,7 @@ LaTeX Info: Redefining \ttfamily on input line 22.
 \tf@lof=\write8
 \openout8 = `myReport.lof'.
 
- [7
+ [8
 
 
 ] (./myReport.lot
@@ -1562,7 +1562,7 @@ LaTeX Info: Redefining \ttfamily on input line 37.
 \tf@lot=\write9
 \openout9 = `myReport.lot'.
 
- [8
+ [9
 
 
 ])
@@ -1810,7 +1810,7 @@ Overfull \hbox (12.60088pt too wide) in paragraph at lines 562--563
 Chapter 4.
 \openout4 = `myReport.pyg'.
 
-(./_minted-myReport/colorful.pygstyle) (./_minted-myReport/4D71AF2DC995933D85DC07C6052E6C17907CF531DB5FBB23410FFF00B9579CD2.pygtex
+(./_minted-myReport/colorful.pygstyle) (./_minted-myReport/631F0B34BE8A452B7E55558C864E4993907CF531DB5FBB23410FFF00B9579CD2.pygtex
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
 (Font)              scaled to size 9.57779pt on input line 1.
 LaTeX Font Info:    Font shape `TU/Inconsolata(0)/m/n' will be
@@ -1820,46 +1820,77 @@ LaTeX Font Info:    Font shape `TU/Inconsolata(0)/b/n' will be
 )
 \openout4 = `myReport.pyg'.
 
- (./_minted-myReport/631F0B34BE8A452B7E55558C864E4993907CF531DB5FBB23410FFF00B9579CD2.pygtex)
+ (./_minted-myReport/4D71AF2DC995933D85DC07C6052E6C17907CF531DB5FBB23410FFF00B9579CD2.pygtex)
 \openout4 = `myReport.pyg'.
 
- (./_minted-myReport/8834F0823D97A47B5B2DE8628FDC9737907CF531DB5FBB23410FFF00B9579CD2.pygtex) [19
-
-
-
-
-]
+ (./_minted-myReport/E6E993344C27A4B58641EB4405E3BF11907CF531DB5FBB23410FFF00B9579CD2.pygtex)
 \openout4 = `myReport.pyg'.
 
- (./_minted-myReport/3A966D8869880A81DF61295D542D759D907CF531DB5FBB23410FFF00B9579CD2.pygtex)
+ (./_minted-myReport/13C4B2840E40D848FFAF653838EB7F59907CF531DB5FBB23410FFF00B9579CD2.pygtex [19
+
+
+
+
+])
 \openout4 = `myReport.pyg'.
 
- (./_minted-myReport/9221CFE226ACFBCEC1E4173301925C55907CF531DB5FBB23410FFF00B9579CD2.pygtex)) [20]
+ (./_minted-myReport/FF1BA9CBB8A32365E7B6E2C120804102907CF531DB5FBB23410FFF00B9579CD2.pygtex)
+\openout4 = `myReport.pyg'.
+
+ (./_minted-myReport/74D9A83219CABAAB06A69FD318873F33907CF531DB5FBB23410FFF00B9579CD2.pygtex)
+Overfull \hbox (1.50514pt too wide) in paragraph at lines 86--86
+[]|\TU/TeXGyreTermes(0)/m/n/10.95 647| 
+ []
+
+
+Overfull \hbox (1.50514pt too wide) in paragraph at lines 87--87
+[]|\TU/TeXGyreTermes(0)/m/n/10.95 645| 
+ []
+
+[20]
+\openout4 = `myReport.pyg'.
+
+ (./_minted-myReport/5B9E000E239E6143D0BB016F6C2AB5F0907CF531DB5FBB23410FFF00B9579CD2.pygtex)
+\openout4 = `myReport.pyg'.
+
+ (./_minted-myReport/FB751B021F24F0EBA0FE8959156DF0D4907CF531DB5FBB23410FFF00B9579CD2.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[]|\TU/TeXGyreTermes(0)/m/n/10.95 Cosine
+ []
+
+
+Overfull \hbox (14.94592pt too wide) in paragraph at lines 127--135
+[][] 
+ []
+
+\openout4 = `myReport.pyg'.
+
+(./_minted-myReport/7A91DF575EFC86157C2DF36726D508D6907CF531DB5FBB23410FFF00B9579CD2.pygtex) [21]) [22]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 Chapter 5.
-) [21
+) [23
 
 
 
 
-] [22] (./myReport.bbl [23
+] [24] (./myReport.bbl [25
 
 
 
 
-] [24]) [25]
+] [26]) [27]
 \openout2 = `chapters/appendix.aux'.
 
  (./chapters/appendix.tex
 Appendix A.
-[26
+[28
 
 
 ]
 Appendix B.
-) [27
+) [29
 
 ]
 Vita
@@ -1867,7 +1898,7 @@ File: ./img/newin_photo.jpg Graphic file (type bmp)
 <./img/newin_photo.jpg>
 File: ./img/may_photo.jpg Graphic file (type bmp)
 <./img/may_photo.jpg>
-[28
+[30
 
 
 
@@ -1877,17 +1908,17 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `myReport.out' has not changed.
-(rerunfilecheck)             Checksum: 7CFCA9C576517E9312F6BAED6C5DB254;13783.
+(rerunfilecheck)             Checksum: 6D80C9EE887B7296D6D3D57D2643F15A;14081.
 runsystem(del myReport.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 43723 strings out of 474761
- 1029695 string characters out of 5761074
+ 43753 strings out of 474761
+ 1032182 string characters out of 5761074
  1942148 words of memory out of 5000000
- 64998 multiletter control sequences out of 15000+600000
+ 65016 multiletter control sequences out of 15000+600000
  566861 words of font info for 185 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  109i,16n,151p,788b,2100s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on myReport.pdf (38 pages).
+Output written on myReport.pdf (41 pages).
