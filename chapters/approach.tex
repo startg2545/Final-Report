@@ -531,10 +531,11 @@ evaluation of the recommendation system. These considerations include:
 There are two performance measurements in total including \textit{hit rate} and \textit{f1 score}.
 
 \subsubsection{Hit Rate}
-Hit Rate is calculated as follows:
+
+A Hit measures the share of users that get at least one relevant recommendation. Hit Rate is calculated as follows:
 
 \begin{equation}
-    \text{HitRate} = \frac{\texttt{Number of hit users}}{\texttt{All users}}
+    \text{HitRate} = \frac{\texttt{Number of Hits}}{\texttt{Number of Users}}
 \end{equation}
 
 \noindent A larger value of recommended courses can potentially improve the hit rate because it provides more opportunities to include relevant items. Therefore, the performance of the hit rate indeed depends on the number of recommended courses.
@@ -570,34 +571,244 @@ Recall, Precision, and F1 Score can use the following formulas:
 
 \noindent The harmonic mean nature makes sure if either Precision or Recall has a really high value, then it does not dominate the score. F1 Score has a high value when both precision and recall values are close to 1.
 
+\newpage
 \section{Function Structure}
 
 \subsection{The TfidfLinearKernel class}
 
-\subsubsection{The \texttt{fit} method}
+\subsubsection{\textcolor{red}{The fit(item\_df) method}}
 
-\subsubsection{The \texttt{predict} method}
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{item\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains course and description columns. \\
+\textbf{Returns} & \textbf{matrix:} \textit{sparse matrix of (n\_sample, n\_features)} \\ & \hspace{5mm} The TF-IDF-Weighted document-term matrix. \\
+\hline
+\end{tabularx}
+\end{table}
 
-\subsubsection{The \texttt{train\_test\_split} method}
+\subsubsection{\textcolor{red}{The predict(name, item\_df, user\_df, matrix, n\_recommendations=10) method}}
 
-\subsubsection{The \texttt{hit\_rate} method}
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{name:} \textit{str} \\ & \hspace{5mm} A name of user \\
+& \textbf{item\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains course and description columns. \\
+& \textbf{user\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains user, course, and features columns. \\
+& \textbf{matrix:} \textit{sparse matrix of (n\_sample, n\_features)} \\ & \hspace{5mm} The TF-IDF-Weighted document-term matrix. \\
+& \textbf{n\_recommendations:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommended courses. \\
+\textbf{Returns} & \textbf{prediction\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains recommended course with score columns \\
+\hline
+\end{tabularx}
+\end{table}
 
-\subsection{The FeatureRatingsKNN class}
+\subsubsection{\textcolor{red}{The train\_test\_split(user\_df, test\_size=0.2) method}}
 
-\subsubsection{The \texttt{fit} method}
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{user\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains user, course, and features columns. \\
+& \textbf{test\_size:} \textit{float, default=0.2} \\ & \hspace{5mm} The proportion of the DataFrame to include in the test split. \\
+\textbf{Returns} & \textbf{X\_train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{X\_test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+\hline
+\end{tabularx}
+\end{table}
 
-\subsubsection{The \texttt{predict} method}
+\subsubsection{\textcolor{red}{The hit\_rate(train, test, item\_data, matrix, k=10) method}}
 
-\subsubsection{The \texttt{train\_test\_split} method}
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+& \textbf{item\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains course and description columns. \\
+& \textbf{matrix:} \textit{sparse matrix of (n\_sample, n\_features)} \\ & \hspace{5mm} The TF-IDF-Weighted document-term matrix. \\
+& \textbf{k:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommendations to consider. \\
+\textbf{Returns} & \textbf{hit\_rate:} \textit{float} \\ & \hspace{5mm} The hit rate of the recommendation system. \\
+\hline
+\end{tabularx}
+\end{table}
 
-\subsubsection{The \texttt{hit\_rate} method}
+\subsubsection{\textcolor{red}{The f1\_score(train, test, item\_data, model, k=10) method}}
 
-\subsection{The Hybrid class}
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+& \textbf{item\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains course and description columns. \\
+& \textbf{matrix:} \textit{sparse matrix of (n\_sample, n\_features)} \\ & \hspace{5mm} The TF-IDF-Weighted document-term matrix. \\
+& \textbf{k:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommendations to consider. \\
+\textbf{Returns} & \textbf{f1\_score:} \textit{float} \\ & \hspace{5mm} The F1 score of the recommendation system. \\
+\hline
+\end{tabularx}
+\end{table}
 
-\subsubsection{The \texttt{fit} method}
+\subsection{The FeatureRatingsKNN Class}
 
-\subsubsection{The \texttt{predict} method}
+\subsubsection{\textcolor{red}{The fit(user\_data) method}}
 
-\subsubsection{The \texttt{train\_test\_split} method}
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{user\_data:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains user-item data. \\
+\textbf{Returns} & \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+\hline
+\end{tabularx}
+\end{table}
 
-\subsubsection{The \texttt{hit\_rate} method}
+\subsubsection{\textcolor{red}{The predict(name, user\_data, model, n\_recommendations=10) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{name:} \textit{str} \\ & \hspace{5mm} The name of the user. \\
+& \textbf{user\_data:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains user-item data. \\
+& \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+& \textbf{n\_recommendation:} \textit{int, default=10} \\ & \hspace{5mm} The number of top items to recommend. \\
+\textbf{Returns} & \textbf{prediction\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains recommended course with score columns \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{\textcolor{red}{The train\_test\_split(user\_data, test\_size=0.2) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{user\_data:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains user-item data. \\
+& \textbf{test\_size:} \textit{float, default=0.2} \\ & \hspace{5mm} The proportion of the DataFrame to include in the test split. \\
+\textbf{Returns} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{\textcolor{red}{The hit\_rate(train, test, model, k=10) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+& \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+& \textbf{k:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommendations to consider. \\
+\textbf{Returns} & \textbf{hit\_rate:} \textit{float} \\ & \hspace{5mm} The hit rate of the recommendation system. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{\textcolor{red}{The f1\_score(train, test, model, k=10) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+& \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+& \textbf{k:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommendations to consider. \\
+\textbf{Returns} & \textbf{f1\_score:} \textit{float} \\ & \hspace{5mm} The F1 score of the recommendation system. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{The Hybrid Class}
+
+\subsubsection{\textcolor{red}{The fit(item\_data, user\_data) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{item\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains course and description columns. \\
+& \textbf{user\_data:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains user-item data. \\
+\textbf{Returns} & \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{\textcolor{red}{The predict(name, item\_data, user\_data, model, n\_recommendations=10) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{name:} \textit{str} \\ & \hspace{5mm} A name of user \\
+& \textbf{item\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains course and description columns. \\
+& \textbf{user\_data:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains user-item data. \\
+& \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+& \textbf{n\_recommendations:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommended courses. \\
+\textbf{Returns} & \textbf{prediction\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains recommended course with score columns \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{\textcolor{red}{The train\_test\_split(item\_data, test\_size=0.2) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{item\_df:} \textit{pd.DataFrame} \\ & \hspace{5mm} The DataFrame that contains course and description columns. \\
+& \textbf{test\_size:} \textit{float, default=0.2} \\ & \hspace{5mm} The proportion of the DataFrame to include in the test split. \\
+\textbf{Returns} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{\textcolor{red}{The hit\_rate(train, test, model, k=10) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+& \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+& \textbf{k:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommendations to consider. \\
+\textbf{Returns} & \textbf{hit\_rate:} \textit{float} \\ & \hspace{5mm} The hit rate of the recommendation system. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{\textcolor{red}{The f1\_score(train, test, model, k=10) method}}
+
+\vspace{-7mm}
+\begin{table}[H]
+\small
+\begin{tabularx}{\textwidth}{|p{2cm}|X|}
+\hline
+\textbf{Parameters} & \textbf{train:} \textit{pd.DataFrame} \\ & \hspace{5mm} The training DataFrame. \\
+& \textbf{test:} \textit{pd.DataFrame} \\ & \hspace{5mm} The testing DataFrame. \\
+& \textbf{model:} \textit{NearestNeighbors} \\ & \hspace{5mm} The fitted nearest neighbors estimator. \\
+& \textbf{k:} \textit{int, default=10} \\ & \hspace{5mm} The number of recommendations to consider. \\
+\textbf{Returns} & \textbf{f1\_score:} \textit{float} \\ & \hspace{5mm} The F1 score of the recommendation system. \\
+\hline
+\end{tabularx}
+\end{table}

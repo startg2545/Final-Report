@@ -61,48 +61,51 @@
 \contentsline {subsubsection}{F1 Score}{18}{subsubsection*.14}%
 \contentsline {section}{\numberline {3.6}Function Structure}{19}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}The TfidfLinearKernel class}{19}{subsection.3.6.1}%
-\contentsline {subsubsection}{The \texttt {fit} method}{19}{subsubsection*.15}%
-\contentsline {subsubsection}{The \texttt {predict} method}{19}{subsubsection*.16}%
-\contentsline {subsubsection}{The \texttt {train\_test\_split} method}{19}{subsubsection*.17}%
-\contentsline {subsubsection}{The \texttt {hit\_rate} method}{19}{subsubsection*.18}%
-\contentsline {subsection}{\numberline {3.6.2}The FeatureRatingsKNN class}{19}{subsection.3.6.2}%
-\contentsline {subsubsection}{The \texttt {fit} method}{19}{subsubsection*.19}%
-\contentsline {subsubsection}{The \texttt {predict} method}{19}{subsubsection*.20}%
-\contentsline {subsubsection}{The \texttt {train\_test\_split} method}{19}{subsubsection*.21}%
-\contentsline {subsubsection}{The \texttt {hit\_rate} method}{19}{subsubsection*.22}%
-\contentsline {subsection}{\numberline {3.6.3}The Hybrid class}{19}{subsection.3.6.3}%
-\contentsline {subsubsection}{The \texttt {fit} method}{19}{subsubsection*.23}%
-\contentsline {subsubsection}{The \texttt {predict} method}{19}{subsubsection*.24}%
-\contentsline {subsubsection}{The \texttt {train\_test\_split} method}{19}{subsubsection*.25}%
-\contentsline {subsubsection}{The \texttt {hit\_rate} method}{19}{subsubsection*.26}%
-\contentsline {chapter}{\numberline {4}Experimentation and Results}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Data Preparation}{20}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Import the classes}{20}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Import datasets}{20}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Extract a user dataset}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Fit the model}{21}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Predict the model}{21}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Observe the results}{21}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Calculate the accuracy}{23}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Tracy Marchant}{23}{subsection.4.6.1}%
-\contentsline {subsubsection}{Hit Rate}{23}{subsubsection*.27}%
-\contentsline {subsubsection}{F1 Score}{23}{subsubsection*.28}%
-\contentsline {subsection}{\numberline {4.6.2}All users}{23}{subsection.4.6.2}%
-\contentsline {subsubsection}{Hit Rate}{23}{subsubsection*.29}%
-\contentsline {subsubsection}{F1 Score}{23}{subsubsection*.30}%
-\contentsline {chapter}{\numberline {5}Conclusions and Discussions}{24}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusions}{24}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Challenges}{24}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Suggestions and further improvements }{25}{section.5.3}%
-\contentsline {chapter}{References}{26}{section*.31}%
-\contentsline {chapter}{\numberline {A}Technical Implementation Details}{29}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Data Collection and Preprocessing}{29}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Content-Based Filtering}{29}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Collaborative Filtering}{29}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Hybrid Approach}{29}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Model Evaluation}{29}{section.A.5}%
-\contentsline {chapter}{\numberline {B}Model Training and Evaluation}{30}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Model Training}{30}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Evaluation Metrics}{30}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Challenges and Solutions}{30}{section.B.3}%
-\contentsline {chapter}{Biographical Sketch}{31}{appendix*.33}%
+\contentsline {subsubsection}{\textcolor {red}{The fit(item\_df) method}}{19}{subsubsection*.15}%
+\contentsline {subsubsection}{\textcolor {red}{The predict(name, item\_df, user\_df, matrix, n\_recommendations=10) method}}{19}{subsubsection*.16}%
+\contentsline {subsubsection}{\textcolor {red}{The train\_test\_split(user\_df, test\_size=0.2) method}}{19}{subsubsection*.17}%
+\contentsline {subsubsection}{\textcolor {red}{The hit\_rate(train, test, item\_data, matrix, k=10) method}}{19}{subsubsection*.18}%
+\contentsline {subsubsection}{\textcolor {red}{The f1\_score(train, test, item\_data, model, k=10) method}}{20}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {3.6.2}The FeatureRatingsKNN Class}{20}{subsection.3.6.2}%
+\contentsline {subsubsection}{\textcolor {red}{The fit(user\_data) method}}{20}{subsubsection*.20}%
+\contentsline {subsubsection}{\textcolor {red}{The predict(name, user\_data, model, n\_recommendations=10) method}}{20}{subsubsection*.21}%
+\contentsline {subsubsection}{\textcolor {red}{The train\_test\_split(user\_data, test\_size=0.2) method}}{20}{subsubsection*.22}%
+\contentsline {subsubsection}{\textcolor {red}{The hit\_rate(train, test, model, k=10) method}}{21}{subsubsection*.23}%
+\contentsline {subsubsection}{\textcolor {red}{The f1\_score(train, test, model, k=10) method}}{21}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {3.6.3}The Hybrid Class}{21}{subsection.3.6.3}%
+\contentsline {subsubsection}{\textcolor {red}{The fit(item\_data, user\_data) method}}{21}{subsubsection*.25}%
+\contentsline {subsubsection}{\textcolor {red}{The predict(name, item\_data, user\_data, model, n\_recommendations=10) method}}{21}{subsubsection*.26}%
+\contentsline {subsubsection}{\textcolor {red}{The train\_test\_split(item\_data, test\_size=0.2) method}}{22}{subsubsection*.27}%
+\contentsline {subsubsection}{\textcolor {red}{The hit\_rate(train, test, model, k=10) method}}{22}{subsubsection*.28}%
+\contentsline {subsubsection}{\textcolor {red}{The f1\_score(train, test, model, k=10) method}}{22}{subsubsection*.29}%
+\contentsline {chapter}{\numberline {4}Experimentation and Results}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Data Preparation}{23}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Import the classes}{23}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Import datasets}{23}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Extract a user dataset}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Fit the model}{24}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Predict the model}{24}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Observe the results}{24}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Calculate the accuracy}{26}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Tracy Marchant}{26}{subsection.4.6.1}%
+\contentsline {subsubsection}{Hit Rate}{26}{subsubsection*.30}%
+\contentsline {subsubsection}{F1 Score}{26}{subsubsection*.31}%
+\contentsline {subsection}{\numberline {4.6.2}All users}{26}{subsection.4.6.2}%
+\contentsline {subsubsection}{Hit Rate}{26}{subsubsection*.32}%
+\contentsline {subsubsection}{F1 Score}{26}{subsubsection*.33}%
+\contentsline {chapter}{\numberline {5}Conclusions and Discussions}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusions}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Challenges}{27}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Suggestions and further improvements }{28}{section.5.3}%
+\contentsline {chapter}{References}{29}{section*.34}%
+\contentsline {chapter}{\numberline {A}Technical Implementation Details}{32}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Data Collection and Preprocessing}{32}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Content-Based Filtering}{32}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Collaborative Filtering}{32}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Hybrid Approach}{32}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Model Evaluation}{32}{section.A.5}%
+\contentsline {chapter}{\numberline {B}Model Training and Evaluation}{33}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Model Training}{33}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Evaluation Metrics}{33}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Challenges and Solutions}{33}{section.B.3}%
+\contentsline {chapter}{Biographical Sketch}{34}{appendix*.36}%

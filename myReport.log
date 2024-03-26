@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  26 MAR 2024 18:52
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  26 MAR 2024 23:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1309,35 +1309,35 @@ runsystem(del myReport.aex)...executed.
  (./myReport.aux (./chapters/frontmatter.aux) (./chapters/intro.aux) (./chapters/background.aux) (./chapters/approach.aux) (./chapters/eval.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux))
 \openout1 = `myReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/TeXGyreHeros(0)/m/n on input line 44.
+(Font)                  OT1/cmss/m/n --> TU/TeXGyreHeros(0)/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/TeXGyreHeros(0)/b/n on input line 44.
+(Font)                  OT1/cmss/bx/n --> TU/TeXGyreHeros(0)/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(0)/m/n on input line 44.
+(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(0)/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(0)/b/n on input line 44.
-Package hyperref Info: Link coloring ON on input line 44.
+(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(0)/b/n on input line 45.
+Package hyperref Info: Link coloring ON on input line 45.
  (./myReport.out) (./myReport.out)
 \@outlinefile=\write6
 \openout6 = `myReport.out'.
@@ -1345,11 +1345,11 @@ Package hyperref Info: Link coloring ON on input line 44.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 44.
+ on input line 45.
 
-LaTeX Info: Redefining \rmfamily on input line 44.
-LaTeX Info: Redefining \sffamily on input line 44.
-LaTeX Info: Redefining \ttfamily on input line 44.
+LaTeX Info: Redefining \rmfamily on input line 45.
+LaTeX Info: Redefining \sffamily on input line 45.
+LaTeX Info: Redefining \ttfamily on input line 45.
 \openout2 = `chapters/frontmatter.aux'.
 
 (./chapters/frontmatter.tex
@@ -1789,21 +1789,21 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 383.
  [15] [16] [17]
-Overfull \hbox (57.8704pt too wide) in paragraph at lines 560--561
+Overfull \hbox (57.8704pt too wide) in paragraph at lines 561--562
 []\TU/Inconsolata(0)/m/n/12 Number of correctly predicted items - The course that system predict correctly. 
  []
 
 
-Overfull \hbox (18.25957pt too wide) in paragraph at lines 561--562
+Overfull \hbox (18.25957pt too wide) in paragraph at lines 562--563
 []\TU/Inconsolata(0)/m/n/12 Total number of relevant items - The courses that have been taken by the
  []
 
 
-Overfull \hbox (12.60088pt too wide) in paragraph at lines 562--563
+Overfull \hbox (12.60088pt too wide) in paragraph at lines 563--564
 []\TU/Inconsolata(0)/m/n/12 Total number of recommended items - All courses that the recommendation
  []
 
-) [18] [19]
+[18] [19] [20] [21]) [22]
 \openout2 = `chapters/eval.aux'.
 
  (./chapters/eval.tex
@@ -1826,7 +1826,7 @@ LaTeX Font Info:    Font shape `TU/Inconsolata(0)/b/n' will be
  (./_minted-myReport/E6E993344C27A4B58641EB4405E3BF11907CF531DB5FBB23410FFF00B9579CD2.pygtex)
 \openout4 = `myReport.pyg'.
 
- (./_minted-myReport/13C4B2840E40D848FFAF653838EB7F59907CF531DB5FBB23410FFF00B9579CD2.pygtex [20
+ (./_minted-myReport/13C4B2840E40D848FFAF653838EB7F59907CF531DB5FBB23410FFF00B9579CD2.pygtex [23
 
 
 
@@ -1847,7 +1847,7 @@ Overfull \hbox (1.50514pt too wide) in paragraph at lines 87--87
 []|\TU/TeXGyreTermes(0)/m/n/10.95 645| 
  []
 
-[21]
+[24]
 \openout4 = `myReport.pyg'.
 
  (./_minted-myReport/5B9E000E239E6143D0BB016F6C2AB5F0907CF531DB5FBB23410FFF00B9579CD2.pygtex)
@@ -1865,32 +1865,32 @@ Overfull \hbox (14.94592pt too wide) in paragraph at lines 127--135
 
 \openout4 = `myReport.pyg'.
 
-(./_minted-myReport/7A91DF575EFC86157C2DF36726D508D6907CF531DB5FBB23410FFF00B9579CD2.pygtex) [22]) [23]
+(./_minted-myReport/7A91DF575EFC86157C2DF36726D508D6907CF531DB5FBB23410FFF00B9579CD2.pygtex) [25]) [26]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 Chapter 5.
-) [24
+) [27
 
 
 
 
-] [25] (./myReport.bbl [26
+] [28] (./myReport.bbl [29
 
 
 
 
-] [27]) [28]
+] [30]) [31]
 \openout2 = `chapters/appendix.aux'.
 
  (./chapters/appendix.tex
 Appendix A.
-[29
+[32
 
 
 ]
 Appendix B.
-) [30
+) [33
 
 ]
 Vita
@@ -1898,7 +1898,7 @@ File: ./img/newin_photo.jpg Graphic file (type bmp)
 <./img/newin_photo.jpg>
 File: ./img/may_photo.jpg Graphic file (type bmp)
 <./img/may_photo.jpg>
-[31
+[34
 
 
 
@@ -1907,25 +1907,18 @@ File: ./img/may_photo.jpg Graphic file (type bmp)
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-
-
-Package rerunfilecheck Warning: File `myReport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `myReport.out':
-(rerunfilecheck)             Before: DAA5BC65E5B959A7F7C465B5E8477ED4;15189
-(rerunfilecheck)             After:  AF0C1889C352E705D6BAAB7F3FBD199C;14783.
+Package rerunfilecheck Info: File `myReport.out' has not changed.
+(rerunfilecheck)             Checksum: 58D12BDE7E25D74830710E7FC2CBFF17;14783.
 runsystem(del myReport.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 43753 strings out of 474761
- 1032185 string characters out of 5761074
- 1942148 words of memory out of 5000000
- 65016 multiletter control sequences out of 15000+600000
- 566861 words of font info for 185 fonts, out of 8000000 for 9000
+ 43755 strings out of 474761
+ 1032284 string characters out of 5761074
+ 1945148 words of memory out of 5000000
+ 65017 multiletter control sequences out of 15000+600000
+ 566869 words of font info for 186 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  109i,16n,151p,788b,2100s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on myReport.pdf (42 pages).
+Output written on myReport.pdf (45 pages).
