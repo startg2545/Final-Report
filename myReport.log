@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  28 MAR 2024 20:40
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  28 MAR 2024 21:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1884,10 +1884,8 @@ Appendix B.
 
 ]
 Vita
-File: ./img/newin_photo.jpg Graphic file (type bmp)
-<./img/newin_photo.jpg>
-File: ./img/may_photo.jpg Graphic file (type bmp)
-<./img/may_photo.jpg>
+File: ./img/newin_picture.jpg Graphic file (type bmp)
+<./img/newin_picture.jpg>
 [34
 
 
@@ -1903,10 +1901,10 @@ runsystem(del myReport.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 43755 strings out of 474761
- 1032284 string characters out of 5761074
+ 43746 strings out of 474761
+ 1032089 string characters out of 5761074
  1945148 words of memory out of 5000000
- 65017 multiletter control sequences out of 15000+600000
+ 65009 multiletter control sequences out of 15000+600000
  566869 words of font info for 186 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  109i,16n,151p,788b,2100s stack positions out of 10000i,1000n,20000p,200000b,200000s
