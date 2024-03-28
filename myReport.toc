@@ -79,18 +79,19 @@
 \contentsline {subsubsection}{\textcolor {red}{The hit\_rate(train, test, model, k=10) method}}{22}{subsubsection*.28}%
 \contentsline {subsubsection}{\textcolor {red}{The f1\_score(train, test, model, k=10) method}}{22}{subsubsection*.29}%
 \contentsline {chapter}{\numberline {4}Experimentation and Results}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Data Preparation}{23}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Import the classes}{23}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Import datasets}{23}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Extract a user dataset}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Fit the model}{24}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Predict the model}{24}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Observe the results}{24}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Calculate the accuracy}{26}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Tracy Marchant}{26}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.1}Install our Python package}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Data Preparation}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Import the classes}{23}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Import datasets}{23}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Extract a user dataset}{24}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Fit the model}{24}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Predict the model}{24}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Observe the results}{24}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Calculate the accuracy}{26}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Tracy Marchant}{26}{subsection.4.7.1}%
 \contentsline {subsubsection}{Hit Rate}{26}{subsubsection*.30}%
 \contentsline {subsubsection}{F1 Score}{26}{subsubsection*.31}%
-\contentsline {subsection}{\numberline {4.6.2}All users}{26}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.7.2}All users}{26}{subsection.4.7.2}%
 \contentsline {subsubsection}{Hit Rate}{26}{subsubsection*.32}%
 \contentsline {subsubsection}{F1 Score}{26}{subsubsection*.33}%
 \contentsline {chapter}{\numberline {5}Conclusions and Discussions}{27}{chapter.5}%
