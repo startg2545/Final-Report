@@ -3,36 +3,51 @@
 
 \ifproject
 \begin{abstractTH}
-โครงงานนี้สำรวจวิธีการที่มีประสิทธิภาพและรวดเร็วในการนำเสนอหลักสูตรออนไลน์
-แก่ผู้เรียนในปัจจุบัน การเรียนรู้ออนไลน์ได้รับความนิยมอย่างกว้างขวางเนื่องจากมี%
-ราคาไม่แพงและเข้าถึงได้
-การจัดหาหลักสูตรที่ตอบสนองความต้องการของผู้เรียนได้ทันท่วงทีเป็นสิ่งสำคัญ%
-อย่างยิ่งในการป้องกันการรบกวนสมาธิจากการเรียน
 
-ด้วยการบูรณาการแนวทางแก้ไขผลกระทบและข้อค้นพบจากการวิจัยที่เกี่ยวข้อง 
-โครงการนี้เน้นย้ำถึงบทบาทที่สำคัญของระบบช่วยแนะนำในการดึงดูดผู้เรียนให้มุ่งเน้นไปที่เส้น%
-ทางการเรียนรู้และบรรลุเป้าหมาย โดยเน้นย้ำถึงการเข้าถึงทางเศรษฐกิจและโอกาสสำหรับ%
-บุคคลทั่วไปในการมีส่วนร่วมกับทักษะอาชีพที่จำเป็น ข้อกังวลเหล่านี้มีความสำคัญเป็นพิเศษ%
-เมื่อพิจารณาจากค่าใช้จ่ายที่สูงของการศึกษาแบบดั้งเดิมและการรับรู้ถึงความมีอภิสิทธิ์ของ%
-สถาบันบางแห่ง ซึ่งสร้างอุปสรรคสำหรับผู้เรียนที่ด้อยโอกาสทางเศรษฐกิจ
+ในภูมิทัศน์ดิจิทัลร่วมสมัย การเรียนรู้ออนไลน์กลายเป็นรูปแบบการศึกษาที่ได้รับการยอมรับอย่างกว้างขวาง 
+เนื่องมาจากความสามารถในการเข้าถึงและความคุ้มค่า การส่งมอบหลักสูตรที่ตรงเวลาตามความต้องการของ%
+ผู้เรียนถือเป็นหัวใจสำคัญในการรักษาความมุ่งมั่นและความมุ่งมั่นในการเรียนรู้ โครงการนี้เน้นย้ำถึงบทบาทที่%
+สำคัญของระบบการแนะนำในการดึงดูดผู้เรียนให้มุ่งเน้นไปที่เส้นทางการเรียนรู้และบรรลุเป้าหมาย โดยเน้นย้ำ%
+ถึงการเข้าถึงทางเศรษฐกิจและโอกาสสำหรับบุคคลทั่วไปในการมีส่วนร่วมกับทักษะอาชีพที่จำเป็น ข้อกังวล%
+เหล่านี้มีความสำคัญเป็นพิเศษเมื่อพิจารณาจากค่าใช้จ่ายที่สูงของการศึกษาแบบดั้งเดิมและการรับรู้ถึงความมี%
+อภิสิทธิ์ของสถาบันบางแห่ง ซึ่งสร้างอุปสรรคสำหรับผู้เรียนที่ด้อยโอกาสทางเศรษฐกิจ
+
+โครงการนี้ใช้วิธีการหลายแง่มุมเพื่อเพิ่มความแม่นยำของคำแนะนำ ในตอนแรกจะรวบรวมข้อมูลผู้ใช้เพื่อวัด%
+การให้คะแนนคุณลักษณะ ซึ่งสะท้อนถึงปฏิกิริยาของผู้เรียนต่อหลักสูตร นอกจากนี้ คำอธิบายหลักสูตรยัง%
+ได้รับการวิเคราะห์เพื่อยืนยันความสำคัญของคำและความเกี่ยวข้องระหว่างหลักสูตร แม้ว่าแนวทางตามเนื้อ%
+หาแบบสแตนด์อโลนจะไม่เพียงพอ แต่โครงการก็นำแนวทางการกรองแบบร่วมมือกันมาใช้ในลำดับถัดไป %
+ในที่นี้ เราจะเรียนรู้การให้คะแนนคุณลักษณะผ่านโมเดล K-Nearest Neighbors (KNN) โดยใช้%
+ประโยชน์จากการวัดความคล้ายคลึงกันเพื่อระบุผู้เรียนที่คล้ายคลึงกัน สิ่งสำคัญอย่างยิ่งคือ โครงการ%
+ได้รวมวิธีการเหล่านี้เข้ากับแบบจำลองการกรองแบบไฮบริด โดยผสมผสานจุดแข็งของทั้งสองแนวทางเพื่อ%
+ประสิทธิภาพสูงสุด การประเมินประสิทธิภาพแสดงให้เห็นถึงประสิทธิภาพของระบบ ซึ่งวัดผ่านความแม่นยำ%
+ของ Hit Rate และ F1 Score ซึ่งแสดงให้เห็นถึงประสิทธิภาพในการเพิ่มประสิทธิภาพการเรียนรู้
+
 \end{abstractTH}
 
 \begin{abstract}
 
-This project explores efficient and rapid solutions for delivering 
-online courses to learners. In today's digital age, online learning 
-has gained widespread popularity due to its affordability and 
-accessibility. Providing courses that cater to the needs of learners 
-in a timely manner is crucial to prevent distractions from studies.
+In the contemporary digital landscape, online learning has emerged as a 
+widely embraced mode of education due to its accessibility and cost-effectiveness. 
+Timely delivery of courses tailored to learners' needs is pivotal in maintaining 
+their focus and commitment to learning. This project highlights the significant 
+role of recommendation systems in attracting learners to focus on their learning 
+paths and achieve their goals. It underscores the economic accessibility and the 
+opportunities for individuals to engage with essential career skills. These 
+concerns are particularly salient given the high cost of traditional education 
+and the perceived elitism of certain institutions, which create barriers for 
+economically disadvantaged learners. 
 
-By integrating solutions, impacts, and findings from related research. 
-This project highlights the significant role of recommendation systems 
-in attracting learners to focus on their learning paths and achieve 
-their goals. It underscores the economic accessibility and the 
-opportunities for individuals to engage with essential career skills. 
-These concerns are particularly salient given the high cost of 
-traditional education and the perceived elitism of certain institutions, 
-which create barriers for economically disadvantaged learners.    
+The project employs a multi-faceted approach to enhance recommendation accuracy. 
+Initially, it collects user information to gauge Feature Ratings, reflecting 
+learners' reactions to courses. Additionally, course descriptions undergo analysis 
+to ascertain word importance and inter-course relevance. While a standalone 
+content-based approach proves insufficient, the project adopts a collaborative 
+filtering approach next. Here, Feature Ratings are learned through a K-Nearest 
+Neighbors (KNN) model, leveraging a similarity metric to identify similar learners. 
+Crucially, the project integrates these methodologies into a Hybrid Filtering model, 
+combining the strengths of both approaches for optimal performance. Performance 
+evaluation showcases the system's efficacy, measured through Hit Rate and F1 Score 
+accuracies, demonstrating its effectiveness in enhancing learning outcomes.
 
 \end{abstract}
 

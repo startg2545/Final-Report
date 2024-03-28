@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  26 MAR 2024 23:19
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  28 MAR 2024 20:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1385,18 +1385,8 @@ LaTeX Font Info:    Font shape `TU/Laksaman(0)/b/n' will be
 ]
 Abstract
 
-Overfull \hbox (5.36398pt too wide) in paragraph at lines 6--11
-[]\TU/Laksaman(0)/m/n/12 โครง งาน นี้ สำรวจ วิธี การ ที่ มี ประสิทธิภาพ และ รวดเร็ว ใน การนำ เสนอ หลักสูตร ออนไลน์ [][]แก่ ผู้ เรียน ใน ปัจจุบัน [][]การ
- []
-
-
-Overfull \hbox (2.23773pt too wide) in paragraph at lines 12--18
-[][]\TU/Laksaman(0)/m/n/12 ด้วย กา รบู รณา การ แนวทาง แก้ไข ผลก ระ ทบ และ ข้อ ค้น พบ จาก การ วิจัย ที่ เกี่ยวข้อง [][]โครงการ นี้ เน้น ย้ำ ถึง บท-
- []
-
-
-Overfull \hbox (2.26628pt too wide) in paragraph at lines 12--18
-\TU/Laksaman(0)/m/n/12 บาท ที่ สำคัญ ของ ระบบ ช่วย แนะนำ ใน การ ดึงดูด ผู้ เรียน ให้ มุ่ง เน้น ไป ที่ เส้น ทางการ เรียน รู้ และ บรรลุ เป้า หมาย [][]โดย
+Overfull \hbox (4.18245pt too wide) in paragraph at lines 15--24
+\TU/Laksaman(0)/m/n/12 ได้ รับ การ วิเคราะห์ เพื่อ ยืนยัน ความ สำคัญ ของ คำ และ ความ เกี่ยวข้อง ระหว่าง หลักสูตร [][]แม้ว่า แนวทาง ตาม เนื้อหา
  []
 
 [2
@@ -1408,19 +1398,19 @@ Abstract
 
 ]
 LaTeX Font Info:    Font shape `TU/Inconsolata(0)/m/n' will be
-(Font)              scaled to size 11.31738pt on input line 49.
+(Font)              scaled to size 11.31738pt on input line 64.
 
-Overfull \hbox (15.695pt too wide) in paragraph at lines 53--55
+Overfull \hbox (15.695pt too wide) in paragraph at lines 68--70
 []\TU/TeXGyreTermes(0)/m/n/12 Furthermore, I would like to acknowledge the support of my colleagues \TU/Inconsolata(0)/m/n/12 (Ms. Patcharaporn
  []
 
 
-Overfull \hbox (0.16634pt too wide) in paragraph at lines 53--55
+Overfull \hbox (0.16634pt too wide) in paragraph at lines 68--70
 \TU/Inconsolata(0)/m/n/12 Satantaipop) \TU/TeXGyreTermes(0)/m/n/12 for their constructive feedback and encouragement during the writing process.
  []
 
 
-Overfull \hbox (27.62802pt too wide) in paragraph at lines 56--57
+Overfull \hbox (27.62802pt too wide) in paragraph at lines 71--72
 []\TU/TeXGyreTermes(0)/m/n/12 Finally, I would like to express my gratitude to \TU/Inconsolata(0)/m/n/12 the Department of Computer Engineering,
  []
 
