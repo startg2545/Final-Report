@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  29 MAR 2024 13:33
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.22)  29 MAR 2024 14:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1820,8 +1820,6 @@ LaTeX Font Info:    Font shape `TU/Inconsolata(0)/b/n' will be
  (./_minted-myReport/131AA419774DD7F7079FB812ADEEDFF1907CF531DB5FBB23410FFF00B9579CD2.pygtex)
 \openout4 = `myReport.pyg'.
 
-runsystem(pygmentize -l "python" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -o _minted-myReport/B368F840D2109F97C78D1BE5110B6514907CF531DB5FBB23410FFF00B9579CD2.pygtex myReport.pyg)...executed.
-
  (./_minted-myReport/B368F840D2109F97C78D1BE5110B6514907CF531DB5FBB23410FFF00B9579CD2.pygtex [23
 
 
@@ -1904,10 +1902,7 @@ File: ./img/may_photo.jpg Graphic file (type bmp)
 
 
 
-]
-runsystem(del _minted-myReport\D25B6F1BC451D435AFD1F79CEA2E3EC5907CF531DB5FBB23410FFF00B9579CD2.pygtex)...executed.
-
- (./myReport.aux (./chapters/frontmatter.aux) (./chapters/intro.aux) (./chapters/background.aux) (./chapters/approach.aux) (./chapters/eval.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux))
+] (./myReport.aux (./chapters/frontmatter.aux) (./chapters/intro.aux) (./chapters/background.aux) (./chapters/approach.aux) (./chapters/eval.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -1918,10 +1913,10 @@ runsystem(del myReport.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 43786 strings out of 474761
- 1034597 string characters out of 5761074
+ 43783 strings out of 474761
+ 1034308 string characters out of 5761074
  1945148 words of memory out of 5000000
- 65039 multiletter control sequences out of 15000+600000
+ 65036 multiletter control sequences out of 15000+600000
  566869 words of font info for 186 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  109i,16n,151p,788b,2100s stack positions out of 10000i,1000n,20000p,200000b,200000s
