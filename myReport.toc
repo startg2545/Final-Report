@@ -93,20 +93,20 @@
 \contentsline {subsubsection}{F1 Score}{26}{subsubsection*.31}%
 \contentsline {subsection}{\numberline {4.7.2}All users}{26}{subsection.4.7.2}%
 \contentsline {subsubsection}{Hit Rate}{26}{subsubsection*.32}%
-\contentsline {subsubsection}{F1 Score}{26}{subsubsection*.33}%
-\contentsline {chapter}{\numberline {5}Conclusions and Discussions}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusions}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Challenges}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Suggestions and further improvements }{28}{section.5.3}%
-\contentsline {chapter}{References}{29}{section*.34}%
-\contentsline {chapter}{\numberline {A}Technical Implementation Details}{32}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Data Collection and Preprocessing}{32}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Content-Based Filtering}{32}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Collaborative Filtering}{32}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Hybrid Approach}{32}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Model Evaluation}{32}{section.A.5}%
-\contentsline {chapter}{\numberline {B}Model Training and Evaluation}{33}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Model Training}{33}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Evaluation Metrics}{33}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Challenges and Solutions}{33}{section.B.3}%
-\contentsline {chapter}{Biographical Sketch}{34}{appendix*.36}%
+\contentsline {subsubsection}{F1 Score}{27}{subsubsection*.33}%
+\contentsline {chapter}{\numberline {5}Conclusions and Discussions}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusions}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Challenges}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Suggestions and further improvements }{29}{section.5.3}%
+\contentsline {chapter}{References}{30}{section*.34}%
+\contentsline {chapter}{\numberline {A}Technical Implementation Details}{33}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Data Collection and Preprocessing}{33}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Content-Based Filtering}{33}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Collaborative Filtering}{33}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Hybrid Approach}{33}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Model Evaluation}{33}{section.A.5}%
+\contentsline {chapter}{\numberline {B}Model Training and Evaluation}{34}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Model Training}{34}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Evaluation Metrics}{34}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Challenges and Solutions}{34}{section.B.3}%
+\contentsline {chapter}{Biographical Sketch}{35}{appendix*.36}%

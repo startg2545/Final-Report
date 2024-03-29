@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} first model evaluation}
+\PYG{n}{first\PYGZus{}hit\PYGZus{}rate} \PYG{o}{=} \PYG{n}{TfidfLinearKernel}\PYG{o}{.}\PYG{n}{hit\PYGZus{}rate}\PYG{p}{(}\PYG{n}{train}\PYG{p}{,} \PYG{n}{test}\PYG{p}{,} \PYG{n}{item\PYGZus{}df}\PYG{p}{,} \PYG{n}{tfidf\PYGZus{}matrix}\PYG{p}{)}
+\PYG{n}{first\PYGZus{}f1\PYGZus{}score} \PYG{o}{=} \PYG{n}{TfidfLinearKernel}\PYG{o}{.}\PYG{n}{f1\PYGZus{}score}\PYG{p}{(}\PYG{n}{train}\PYG{p}{,} \PYG{n}{test}\PYG{p}{,} \PYG{n}{item\PYGZus{}df}\PYG{p}{,} \PYG{n}{tfidf\PYGZus{}matrix}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} second model evaluation}
+\PYG{n}{second\PYGZus{}hit\PYGZus{}rate} \PYG{o}{=} \PYG{n}{FeatureRatingsKNN}\PYG{o}{.}\PYG{n}{hit\PYGZus{}rate}\PYG{p}{(}\PYG{n}{train}\PYG{p}{,} \PYG{n}{test}\PYG{p}{,} \PYG{n}{knn\PYGZus{}model}\PYG{p}{)}
+\PYG{n}{second\PYGZus{}f1\PYGZus{}score} \PYG{o}{=} \PYG{n}{FeatureRatingsKNN}\PYG{o}{.}\PYG{n}{f1\PYGZus{}score}\PYG{p}{(}\PYG{n}{train}\PYG{p}{,} \PYG{n}{test}\PYG{p}{,} \PYG{n}{knn\PYGZus{}model}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} hybrid model evaluation}
+\PYG{n}{hybrid\PYGZus{}hit\PYGZus{}rate} \PYG{o}{=} \PYG{n}{Hybrid}\PYG{o}{.}\PYG{n}{hit\PYGZus{}rate}\PYG{p}{(}\PYG{n}{train}\PYG{p}{,} \PYG{n}{test}\PYG{p}{,} \PYG{n}{item\PYGZus{}df}\PYG{p}{,} \PYG{n}{hybrid\PYGZus{}knn\PYGZus{}model}\PYG{p}{)}
+\PYG{n}{hybrid\PYGZus{}f1\PYGZus{}score} \PYG{o}{=} \PYG{n}{Hybrid}\PYG{o}{.}\PYG{n}{f1\PYGZus{}score}\PYG{p}{(}\PYG{n}{train}\PYG{p}{,} \PYG{n}{test}\PYG{p}{,} \PYG{n}{item\PYGZus{}df}\PYG{p}{,} \PYG{n}{hybrid\PYGZus{}knn\PYGZus{}model}\PYG{p}{)}
+\end{Verbatim}

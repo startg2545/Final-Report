@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{} This compares the model\PYGZsq{}s predictions against the actual preferences in the test set.}
-\PYG{n}{true} \PYG{o}{=} \PYG{n}{test}\PYG{p}{[}\PYG{n}{test}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}username\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}Tracy Marchant\PYGZsq{}}\PYG{p}{][}\PYG{l+s+s1}{\PYGZsq{}course\PYGZsq{}}\PYG{p}{]}  \PYG{c+c1}{\PYGZsh{} actual preferences}
-\PYG{n}{first\PYGZus{}prediction} \PYG{o}{=} \PYG{n}{TfidfLinearKernel}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Tracy Marchant\PYGZsq{}}\PYG{p}{,} \PYG{n}{i\PYGZus{}data}\PYG{p}{,} \PYG{n}{train}\PYG{p}{,} \PYG{n}{first\PYGZus{}model}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
-\PYG{n}{second\PYGZus{}prediction} \PYG{o}{=} \PYG{n}{FeatureRatingsKNN}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Tracy Marchant\PYGZsq{}}\PYG{p}{,} \PYG{n}{train}\PYG{p}{,} \PYG{n}{second\PYGZus{}model}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
-\PYG{n}{hybrid\PYGZus{}prediction} \PYG{o}{=} \PYG{n}{Hybrid}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Tracy Marchant\PYGZsq{}}\PYG{p}{,} \PYG{n}{i\PYGZus{}data}\PYG{p}{,} \PYG{n}{train}\PYG{p}{,} \PYG{n}{hybrid\PYGZus{}model}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
-\end{Verbatim}

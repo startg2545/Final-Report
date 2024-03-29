@@ -47,8 +47,8 @@ The dataset provided by the developer is needed to be a csv format and consists 
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
 import pandas as pd
-i_data = pd.read_csv('https://startg2545.github.io/item_tutorial.csv')
-ui_data = pd.read_csv('https://startg2545.github.io/user_item_tutorial.csv')
+item_df = pd.read_csv('https://startg2545.github.io/item_tutorial.csv')
+user_df = pd.read_csv('https://startg2545.github.io/user_item_tutorial.csv')
 \end{minted}
 
 \section{Extract a user dataset}
@@ -57,7 +57,7 @@ It is crucial to split the dataset into training and testing sets to erase the
 test data from model's memories.
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
-train, test = TfidfLinearKernel.train_test_split(ui_data, test_size=0.2)
+train, test = TfidfLinearKernel.train_test_split(user_df, test_size=0.25)
 \end{minted}
 
 \section{Fit the model}
@@ -65,29 +65,28 @@ train, test = TfidfLinearKernel.train_test_split(ui_data, test_size=0.2)
 The next step is to train the model using the training dataset.
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
-first_model = TfidfLinearKernel.fit(i_data)
-second_model = FeatureRatingsKNN.fit(train)
-hybrid_model = Hybrid.fit(i_data, train)
+tfidf_matrix = TfidfLinearKernel.fit(item_df)
+knn_model = FeatureRatingsKNN.fit(train)
+hybrid_knn_model = Hybrid.fit(item_df, train)
 \end{minted}
 
 \section{Predict the model}
 
-To evaluate the accuracy of all approaches, we need to predict recommendations for all 
-users, analyze them, then incorporate them into the performance assessment.
-
+So far, you can predict recommendations for every user, analyze and 
+incorporate them into the performance assessment. 
 Let's take an example of a user named \textit{Tracy Marchant} below:
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
 # This compares the model's predictions against the actual preferences in the test set.
-true = test[test['username'] == 'Tracy Marchant']['course']  # actual preferences
-first_prediction = TfidfLinearKernel.predict('Tracy Marchant', i_data, train, first_model, 10)
-second_prediction = FeatureRatingsKNN.predict('Tracy Marchant', train, second_model, 10)
-hybrid_prediction = Hybrid.predict('Tracy Marchant', i_data, train, hybrid_model, 10)
+true = test[test['username'] == 'Tracy Marchant']['course'] # actual preferences
+first_prediction = TfidfLinearKernel.predict('Tracy Marchant', item_df, train, tfidf_matrix, 10)
+second_prediction = FeatureRatingsKNN.predict('Tracy Marchant', train, knn_model, 10)
+hybrid_prediction = Hybrid.predict('Tracy Marchant', item_df, train, hybrid_knn_model, 10)
 \end{minted}
 
 \section{Observe the results}
 
-This user has taken totally six courses, and the \textit{test\_size} is 20\%, 
+This user has taken totally six courses, and the \textit{test\_size} is 25\%, 
 so the test set contains two courses by rounding.
 
 \begin{minted}[frame=lines, fontsize=\footnotesize]{python}
@@ -181,6 +180,10 @@ hybrid_prediction
 
 \subsection{Tracy Marchant}
 
+There is no certain function to calculate the hit rate and F1 score for a
+single user. However, you can calculate them manually. Here are the results for 
+\textit{Tracy Marchant}:
+
 \subsubsection{Hit Rate}
 
 \begin{itemize}
@@ -198,6 +201,23 @@ hybrid_prediction
 \end{itemize}
 
 \subsection{All users}
+
+For the model evaluation, you are capable to calculate the hit rate and F1 score 
+for all approaches by following the code below:
+
+\begin{minted}[frame=lines, fontsize=\footnotesize]{python}
+# first model evaluation
+first_hit_rate = TfidfLinearKernel.hit_rate(train, test, item_df, tfidf_matrix)
+first_f1_score = TfidfLinearKernel.f1_score(train, test, item_df, tfidf_matrix)
+
+# second model evaluation
+second_hit_rate = FeatureRatingsKNN.hit_rate(train, test, knn_model)
+second_f1_score = FeatureRatingsKNN.f1_score(train, test, knn_model)
+
+# hybrid model evaluation
+hybrid_hit_rate = Hybrid.hit_rate(train, test, item_df, hybrid_knn_model)
+hybrid_f1_score = Hybrid.f1_score(train, test, item_df, hybrid_knn_model)
+\end{minted}
 
 \subsubsection{Hit Rate}
 
